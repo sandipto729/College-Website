@@ -19,11 +19,6 @@
           "sponsoredProjects": 5,
           "consultancyProjects": 3
         },
-        "education": {
-          "doctoralStudents": 10,
-          "pgStudents": 15,
-          "ugStudents": 30
-        },
         "ownEducation":
           [
             {
@@ -76,26 +71,31 @@
         ],
         "doctoralStudents": [
           {
-            "photo": "https://example.com/student1.jpg",
+            "photo": "https://static.toiimg.com/thumb/msid-101260613,width-1280,height-720,resizemode-4/101260613.jpg",
             "type": "Full Time Research Scholar (BEAT)",
             "subject": "Cognitive Science"
           },
           {
-            "photo": "https://example.com/student2.jpg",
+            "photo": "https://www.millenniumpost.in/h-upload/2024/09/30/810366-srk-1.webp",
+            "type": "Part Time Research Scholar",
+            "subject": "Biomedical Signal Processing"
+          },
+          {
+            "photo": "https://www.millenniumpost.in/h-upload/2024/09/30/810366-srk-1.webp",
             "type": "Part Time Research Scholar",
             "subject": "Biomedical Signal Processing"
           }
         ],
         "pgStudents": [
           {
-            "photo": "https://example.com/pgstudent1.jpg",
+            "photo": "https://images.tv9hindi.com/wp-content/uploads/2023/11/shah-rukh-khan-bollywood-box-office-collection.jpg",
             "type": "PG Student",
             "subject": "Artificial Intelligence in Medicine"
           }
         ],
         "ugStudents": [
           {
-            "photo": "https://example.com/ugstudent1.jpg",
+            "photo": "https://www.livemint.com/lm-img/img/2024/05/23/600x338/CRICKET-IND-IPL-T20-HYDERABAD-KOLKATA-95_1716427886047_1716427965399.jpg",
             "type": "UG Student",
             "subject": "Neural Networks"
           }
