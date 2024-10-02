@@ -1,0 +1,185 @@
+/* Container for the entire profile page */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff5e6; /* Light orange background for a warm tone */
+  }
+  
+/* Left bar containing profile details */
+.leftBar {
+    width: 25%;
+    background-color: #8cb6f9; /* Bright orange */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid #525150; /* Deep orange */
+    border-radius: 1rem;
+  }
+  
+.leftBar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px solid #333232; /* Bold border around the image */
+  }
+  
+.leftBar p {
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+    color: #000000; /* Dark brown for a bold contrast */
+  }
+  
+/* Social media section */
+.socialMedia {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+  }
+  
+.socialMedia a {
+    font-size: 22px;
+    color: #000000; /* Muted brown */
+    transition: color 0.3s ease;
+  }
+  
+.socialMedia a:hover {
+    color: #074a7d; /* Bright orange when hovered */
+  }
+  
+/* Middle bar for publication and education details */
+.middleBar {
+    width: 60%;
+    padding: 20px;
+    background-color: #b2fffb; /* Soft peach background */
+  }
+  
+.pubEdu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+.pub, .edu {
+    width: 48%;
+    padding: 15px;
+    background-color: #93dafa; /* Bright yellow */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.pub p, .edu p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #bf360c; /* Dark red-orange for titles */
+  }
+  
+.box {
+    border: 1px solid #ffab91;
+    height: 5rem;
+    width: 10rem;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 8px;
+    background-color: #ffccbc; /* Light coral */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+.box:hover {
+    transform: scale(1.05);
+    background-color: #ffab91; /* Brighter coral on hover */
+  }
+  
+.box p {
+    margin: 0;
+    font-size: 14px;
+    color: #5d4037; /* Warm brown */
+  }
+  
+/* Right bar for navigation */
+.rightBar {
+    width: 25%;
+    background-color: #ffecb3; /* Soft yellow */
+    padding: 20px;
+    border-left: 2px solid #ffcc80;
+  }
+  
+.rightBarList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+.rightBar li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.rightBar li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #5d4037; /* Warm brown */
+    padding: 10px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+.rightBar li a:hover {
+    background-color: #ff7043; /* Bright orange */
+    color: #fff;
+  }
+
+  .menu{
+    align-self: flex-end;
+    font-weight: 500;
+    cursor: pointer;
+    visibility: hidden;
+  }
+  
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .leftBar, .rightBar, .middleBar {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .pub, .edu {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .socialMedia {
+      justify-content: center;
+      gap: 10px;
+    }
+    .menu{
+      visibility: visible;
+    }
+}
+
