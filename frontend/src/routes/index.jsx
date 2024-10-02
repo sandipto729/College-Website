@@ -8,7 +8,7 @@ import WorkExperience from './../pages/TecherProfile/TeacherData/WorkExperience/
 import ResearchInterest from './../pages/TecherProfile/TeacherData/ResearchInterest/ResearchInterest';
 import Publications from './../pages/TecherProfile/TeacherData/Publication/Publication';
 
-const router = createBrowserRouter([
+const routers = createBrowserRouter([
   {
     path: '/',
     element: <App />,
@@ -37,4 +37,4 @@ const router = createBrowserRouter([
   }
 ]);
 
-export default router;
+export default routers;
