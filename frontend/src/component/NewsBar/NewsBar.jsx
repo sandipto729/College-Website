@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation'; // Import navigation CSS
+import 'swiper/css/navigation'; 
 import 'swiper/css/autoplay';
 
 import styles from './NewsBar.module.css';
-import { Pagination, Autoplay, Navigation } from 'swiper/modules'; // Import Pagination, Autoplay, and Navigation
+import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 
 export default function NewsBar() {
     const [news, setNews] = useState([]);
