@@ -1,0 +1,105 @@
+{
+    "news": [
+      {
+        "title": "Breakthrough in AI Technology Revolutionizes Healthcare",
+        "link": "https://example.com/news/ai-healthcare-breakthrough",
+        "date": "2024-01-15"
+      },
+      {
+        "title": "Global Stock Markets See Record Gains Amid Tech Boom",
+        "link": "https://example.com/news/global-stock-markets-tech-boom",
+        "date": "2024-01-20"
+      },
+      {
+        "title": "Climate Change: New Report Highlights Urgency for Action",
+        "link": "https://example.com/news/climate-change-report-urgency",
+        "date": "2024-02-05"
+      },
+      {
+        "title": "Olympics 2024: Host City Gears Up for Grand Event",
+        "link": "https://example.com/news/olympics-2024-preparations",
+        "date": "2024-02-10"
+      },
+      {
+        "title": "Scientists Discover New Species in the Amazon Rainforest",
+        "link": "https://example.com/news/amazon-rainforest-new-species",
+        "date": "2024-02-18"
+      },
+      {
+        "title": "Electric Vehicles Sales Surge as Gas Prices Climb",
+        "link": "https://example.com/news/electric-vehicles-sales-surge",
+        "date": "2024-03-01"
+      },
+      {
+        "title": "Cryptocurrency Regulation: What Investors Need to Know",
+        "link": "https://example.com/news/cryptocurrency-regulation-investors",
+        "date": "2024-03-10"
+      },
+      {
+        "title": "NASA Prepares for Ambitious Mission to Mars",
+        "link": "https://example.com/news/nasa-mission-to-mars",
+        "date": "2024-03-15"
+      },
+      {
+        "title": "Global Hunger Crisis: UN Urges Immediate Response",
+        "link": "https://example.com/news/global-hunger-crisis-response",
+        "date": "2024-03-25"
+      },
+      {
+        "title": "Breakthrough in Quantum Computing Promises Faster Processing",
+        "link": "https://example.com/news/quantum-computing-breakthrough",
+        "date": "2024-04-05"
+      },
+      {
+        "title": "Major Tech Company Announces Next-Generation Smartphone",
+        "link": "https://example.com/news/tech-company-next-gen-smartphone",
+        "date": "2024-04-15"
+      },
+      {
+        "title": "New Study Finds Link Between Sleep and Cognitive Performance",
+        "link": "https://example.com/news/sleep-cognitive-performance-study",
+        "date": "2024-04-25"
+      },
+      {
+        "title": "World Leaders Meet to Discuss Global Security Concerns",
+        "link": "https://example.com/news/world-leaders-global-security",
+        "date": "2024-05-01"
+      },
+      {
+        "title": "Breakthrough in Renewable Energy Storage Systems",
+        "link": "https://example.com/news/renewable-energy-storage-breakthrough",
+        "date": "2024-05-12"
+      },
+      {
+        "title": "Digital Privacy Concerns Rise Amid Growing Surveillance",
+        "link": "https://example.com/news/digital-privacy-surveillance",
+        "date": "2024-05-20"
+      },
+      {
+        "title": "Medical Experts Warn Against New Global Health Threat",
+        "link": "https://example.com/news/global-health-threat-warning",
+        "date": "2024-06-01"
+      },
+      {
+        "title": "Electric Airplanes: The Future of Sustainable Aviation",
+        "link": "https://example.com/news/electric-airplanes-sustainable-aviation",
+        "date": "2024-06-10"
+      },
+      {
+        "title": "Study Reveals Social Media's Impact on Mental Health",
+        "link": "https://example.com/news/social-media-mental-health-study",
+        "date": "2024-06-25"
+      },
+      {
+        "title": "Economic Policies Shift as Inflation Rises Globally",
+        "link": "https://example.com/news/economic-policies-inflation",
+        "date": "2024-07-01"
+      },
+      {
+        "title": "Scientists Unlock Mysteries of the Deep Ocean",
+        "link": "https://example.com/news/deep-ocean-discoveries",
+        "date": "2024-07-15"
+      }
+    ]
+  }
+  

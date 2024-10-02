@@ -1,0 +1,76 @@
+.newsBarContainer {
+    width: 85vw;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+}
+
+.newsBarHeader {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background: hsla(152, 100%, 50%, 1);
+    background: linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    padding: 0.3rem;
+    border-radius: 2rem;
+    box-shadow: 1px 1px 10px 1px #878787;
+}
+
+.mySwiper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 40px; 
+}
+
+.newsSlide {
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 200px; 
+}
+
+.newsItem {
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: rgb(9,74,121);
+    background: linear-gradient(215deg, rgba(9,74,121,1) 35%, rgba(4,19,49,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    outline: 1px solid rgb(4,19,49);
+    border-radius: 1rem;
+}
+.newsItem:hover{
+    transform: scale(1.01);
+    transition-duration: 0.5s;
+}
+.newsItem a{
+    text-decoration: dotted;
+    color: white;
+}
+.newsItem a:hover{
+    color: rgb(208, 210, 210);
+}
+.newsItem p{
+    background-color: #ccc;
+    color: rgb(0, 0, 0);
+    padding: 1.2px;
+    border-radius: 0.1rem;
+    border: 1px solid rgb(188, 251, 246);
+}
+.swiper-pagination {
+    bottom: 10px !important; 
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #000; 
+    font-size: 15px;
+}
