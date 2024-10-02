@@ -27,6 +27,10 @@ const routers = createBrowserRouter([
     element: <TecherProfile />,
     children: [
       {
+        index: true,
+        element: <Education />,
+      },
+      {
         path: 'education/:id',
         element: <Education />,
       },
