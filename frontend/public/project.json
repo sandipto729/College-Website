@@ -1,0 +1,57 @@
+[
+    {
+        "Sl No": 1,
+        "Title": "Innovative AI Solutions",
+        "Name of the PI": "Dr. Alice Smith",
+        "Name of the CoPIs": ["Dr. Bob Johnson", "Dr. Frank Garcia"],
+        "Funding Agency": "Agency A",
+        "Amount (Rs.)": 600000,
+        "Project Status": "Ongoing",
+        "Date of Initiation": "2022-01-15",
+        "Date of Completion": "2024-01-14"
+    },
+    {
+        "Sl No": 2,
+        "Title": "Sustainable Energy Systems",
+        "Name of the PI": "Dr. Bob Johnson",
+        "Name of the CoPIs": ["Dr. Alice Smith", "Dr. Hannah Kim"],
+        "Funding Agency": "Agency B",
+        "Amount (Rs.)": 450000,
+        "Project Status": "Completed",
+        "Date of Initiation": "2021-06-10",
+        "Date of Completion": "2023-06-09"
+    },
+    {
+        "Sl No": 3,
+        "Title": "Data Science for Healthcare",
+        "Name of the PI": "Dr. Alice Smith",
+        "Name of the CoPIs": ["Dr. David Brown"],
+        "Funding Agency": "Agency C",
+        "Amount (Rs.)": 500000,
+        "Project Status": "Ongoing",
+        "Date of Initiation": "2023-03-05",
+        "Date of Completion": "2025-03-04"
+    },
+    {
+        "Sl No": 4,
+        "Title": "Smart Agriculture Technologies",
+        "Name of the PI": "Dr. Frank Garcia",
+        "Name of the CoPIs": ["Dr. Emma Wilson", "Dr. Bob Johnson"],
+        "Funding Agency": "Agency D",
+        "Amount (Rs.)": 700000,
+        "Project Status": "Pending",
+        "Date of Initiation": "2023-09-01",
+        "Date of Completion": "2025-09-01"
+    },
+    {
+        "Sl No": 5,
+        "Title": "Advanced Robotics Research",
+        "Name of the PI": "Dr. David Brown",
+        "Name of the CoPIs": ["Dr. Frank Garcia", "Dr. Hannah Kim"],
+        "Funding Agency": "Agency E",
+        "Amount (Rs.)": 800000,
+        "Project Status": "Ongoing",
+        "Date of Initiation": "2022-07-20",
+        "Date of Completion": "2024-07-19"
+    }
+]

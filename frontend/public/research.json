@@ -1,0 +1,28 @@
+[
+    {
+        "Collaborating Institute / Organization": "Institute A",
+        "Areas of Collaboration": ["Research", "Workshops", "Funding"],
+        "Faculty Members Involved": ["Dr. Alice Smith", "Dr. Bob Johnson", "Dr. Frank Garcia"],
+        "Year": 2021
+    },
+    {
+        "Collaborating Institute / Organization": "Institute B",
+        "Areas of Collaboration": ["Joint Publications", "Conferences"],
+        "Faculty Members Involved": ["Dr. Alice Smith", "Dr. Frank Garcia"],
+        "Year": 2022
+    },
+    {
+        "Collaborating Institute / Organization": "Institute C",
+        "Areas of Collaboration": ["Student Exchange", "Collaborative Projects"],
+        "Faculty Members Involved": ["Dr. David Brown", "Dr. Bob Johnson"],
+        "Year": 2020
+    },
+    {
+        "Collaborating Institute / Organization": "Institute D",
+        "Areas of Collaboration": ["Data Sharing", "Research Training"],
+        "Faculty Members Involved": ["Dr. Emma Wilson", "Dr. Hannah Kim", "Dr. Bob Johnson"],
+        "Year": 2023
+    }
+  ]
+//Research page
+  
