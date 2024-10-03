@@ -1,0 +1,24 @@
+.Table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+  
+.Table th, .Table td {
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    text-align: center;
+}
+
+.Table td {
+    max-width: 30px; 
+    word-wrap: break-word; 
+    white-space: normal; 
+}
+.Table th {
+    background-color: #d4d2d2;
+}
+  
+.Table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
