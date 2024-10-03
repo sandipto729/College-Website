@@ -12,6 +12,11 @@ const TeacherProfile = () => {
   const location = useLocation();
   const [professor, setProfessor] = useState(null);
   const [check, setCheck] = useState(true);
+  const [sponsoredProjects, setSponsoredProjects] = useState([]);
+  const [consultancyProjects, setConsultancyProjects] = useState([]);
+
+
+
 
   const fetchProfessor = async () => {
     try {
@@ -33,9 +38,31 @@ const TeacherProfile = () => {
     }
   };
 
+  
+  const fetchProjects = async () => {
+    try {
+      const response = await fetch(SummaryApi.GetCseProjectDetails.url, {
+        method: SummaryApi.GetCseProjectDetails.method,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id })
+      });
+
+      const projectData = await response.json();
+      setSponsoredProjects(projectData.sponsered || []);
+      setConsultancyProjects(projectData.consultancy || []);
+      
+      console.log('Fetched Projects:', projectData);
+    } catch (error) {
+      console.error("Error fetching project details:", error);
+    }
+  };
+
 
   useEffect(() => {
     fetchProfessor();
+    fetchProjects();
   }, [id]);
 
   useEffect(() => {
@@ -95,14 +122,20 @@ const TeacherProfile = () => {
                   <p>{professor.publications.length}</p>
                 </div>
               </Link>
-              <div className={styles.box}>
-                <p>Sponsored Projects</p>
-                <p>{professor.publicationDetails.sponsoredProjects}</p>
-              </div>
-              <div className={styles.box}>
-                <p>Consultancy Projects</p>
-                <p>{professor.publicationDetails.consultancyProjects}</p>
-              </div>
+              <Link to={`/professor/${id}/projects/${id}`}>
+                <div className={styles.box}>
+                  <p>Sponsored Projects</p>
+                  <p>{sponsoredProjects.length}</p>
+                </div>
+              </Link>
+              <Link to={`/professor/${id}/projects/${id}`}
+              >
+                <div className={styles.box}>
+                  <p>Consultancy Projects</p>
+                  <p>{consultancyProjects.length}</p>
+                </div>
+              </Link>
+
             </div>
           </div>
           <div className={styles.edu}>

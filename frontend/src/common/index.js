@@ -12,6 +12,10 @@ const SummaryApi={
     GetCseProfProfile:{
         url:`${backendUrl}/api/CseProfProfile`,
         method:"POST"
+    },
+    GetCseProjectDetails:{
+        url:`${backendUrl}/api/CseProjectDetails`,
+        method:"POST"
     }
 }
 

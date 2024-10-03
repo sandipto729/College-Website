@@ -14,7 +14,7 @@ import AwardsAndRecognition from '../pages/TecherProfile/TeacherData/Award/Award
 import AdministrativeResponsibilities from '../pages/TecherProfile/TeacherData/Administration/Adminintration';
 import ConactProf from './../pages/TecherProfile/TeacherData/Contact/Contact';
 import MiscellaneousProf from './../pages/TecherProfile/TeacherData/Miscellaneous/Miscellaneous'
-
+import CseProject from './../pages/TecherProfile/TeacherData/Project/Project';
 
 
 const routers = createBrowserRouter([
@@ -73,6 +73,10 @@ const routers = createBrowserRouter([
       {
         path:'miscellaneous/:id',
         element:<MiscellaneousProf/>
+      },
+      {
+        path:'projects/:id',
+        element:<CseProject/>
       }
     ]
   }
