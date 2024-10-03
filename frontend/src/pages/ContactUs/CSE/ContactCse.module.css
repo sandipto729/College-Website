@@ -1,17 +1,28 @@
 /* ContactUs.module.css */
 .formContainer {
-    background-color: darkgrey;
-    width: 28%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
     margin: 0 auto;
     padding: 20px;
-    /* background-color: #f9f9f9; */
+    background-color: #f9f9f9;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
+    
+  }
+  .contactForm{
+    width: 30%;
+    background-color: rgb(221, 221, 221);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 1px solid rgb(191, 190, 190);
+    padding: 0.5rem;
+    border-radius: 0.2rem;
   }
   
   .formLabel {
@@ -19,12 +30,12 @@
     margin-bottom: 8px;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
+    color: #454545;
   }
   
   .formInput,
   .formTextarea {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin-bottom: 15px;
     border: 2px solid #ccc;

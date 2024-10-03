@@ -13,7 +13,7 @@ import ContactUs from './pages/ContactUs/CSE/ConatctCse'
 function App() {
   return (
     <>
-    <NewsBar/>
+    {/* <NewsBar/> */}
     <ContactUs/>
     <ToastContainer />
       <Outlet />
