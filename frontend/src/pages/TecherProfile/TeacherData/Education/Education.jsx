@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import styles from './../TeacherData.module.css'
+import SummaryApi from '../../../../common';
 
 const Education = () => {
   const { id } = useParams();
@@ -9,9 +10,15 @@ const Education = () => {
 
   const fetchEducation = async () => {
     try {
-      const response = await fetch('/Techer.json');
-      const data = await response.json();
-      const foundEducation = data.professors.find((prof) => prof._id === id);
+      const response = await fetch(SummaryApi.GetCseProfProfile.url, {
+        method: SummaryApi.GetCseProfProfile.method,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id })
+      });
+      
+      const foundEducation = await response.json();
       setEducation(foundEducation.ownEducation);
       console.log(foundEducation.ownEducation);
     } catch (error) {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './../TeacherData.module.css'; 
+import SummaryApi from '../../../../common';
 
 const AwardsAndRecognition = () => {
   const { id } = useParams();
@@ -8,9 +9,14 @@ const AwardsAndRecognition = () => {
 
   const fetchAwards = async () => {
     try {
-      const response = await fetch('/Techer.json');
-      const data = await response.json();
-      const foundAwards = data.professors.find((prof) => prof._id === id);
+      const response = await fetch(SummaryApi.GetCseProfProfile.url, {
+        method: SummaryApi.GetCseProfProfile.method,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id })
+      });
+      const foundAwards = await response.json();
       setAwards(foundAwards.awardsAndRecognition);
     } catch (error) {
       console.error("Error fetching professor's awards and recognitions:", error);

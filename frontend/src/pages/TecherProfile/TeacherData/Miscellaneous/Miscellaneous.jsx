@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './miscellaneous.module.css'; 
+import SummaryApi from '../../../../common';
 
 const Miscellaneous = () => {
   const { id } = useParams();
@@ -8,9 +9,15 @@ const Miscellaneous = () => {
 
   const fetchMiscellaneous = async () => {
     try {
-      const response = await fetch('/Techer.json');
-      const data = await response.json();
-      const foundMiscellaneous = data.professors.find((prof) => prof._id === id);
+      const response = await fetch(SummaryApi.GetCseProfProfile.url, {
+        method: SummaryApi.GetCseProfProfile.method,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id })
+      });
+      
+      const foundMiscellaneous = await response.json();
       setMiscellaneous(foundMiscellaneous.miscellaneous);
     } catch (error) {
       console.error("Error fetching professor's miscellaneous information:", error);

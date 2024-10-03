@@ -1,5 +1,4 @@
-{
-    "news": [
+[
       {
         "title": "Breakthrough in AI Technology Revolutionizes Healthcare",
         "link": "https://example.com/news/ai-healthcare-breakthrough",
@@ -101,5 +100,4 @@
         "date": "2024-07-15"
       }
     ]
-  }
   

@@ -1,7 +1,6 @@
-{
-    "professors": [
+ [
       {
-        "_id": "1",
+       
         "name": "Dr. John Doe",
         "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH1sgPVKcERMN1gZNZpGExfxBj26y8MdsZDg&sg",
         "professorType": "Full Professor",
@@ -136,7 +135,7 @@
 
 
       {
-        "_id": "2",
+      
         "name": "Dr. Jane Smith",
         "photo": "https://example.com/photo2.jpg",
         "professorType": "Associate Professor",
@@ -257,7 +256,7 @@
 
 
       {
-        "_id": "3",
+        
         "name": "Dr. John Doe",
         "photo": "https://example.com/photo1.jpg",
         "professorType": "Full Professor",
@@ -391,7 +390,7 @@
 
 
       {
-        "_id": "4",
+        
         "name": "Dr. Jane Smith",
         "photo": "https://example.com/photo2.jpg",
         "professorType": "Associate Professor",
@@ -512,263 +511,7 @@
 
 
       {
-        "_id": "5",
-        "name": "Dr. John Doe",
-        "photo": "https://example.com/photo1.jpg",
-        "professorType": "Full Professor",
-        "collegeJoinYear": 2010,
-        "socialMedia": {
-          "website": "https://professorwebsite1.com",
-          "linkedin": "https://linkedin.com/in/professor1",
-          "twitter": "https://twitter.com/professor1",
-          "facebook": "https://facebook.com/professor1",
-          "googleScholar": "https://scholar.google.com/citations?user=professor1",
-          "researchGate": "https://researchgate.net/profile/professor1"
-        },
-        "publicationDetails": {
-          "totalPublications": 50,
-          "sponsoredProjects": 5,
-          "consultancyProjects": 3
-        },
-        "education": {
-          "doctoralStudents": 10,
-          "pgStudents": 15,
-          "ugStudents": 30
-        },
-        "ownEducation":
-          [
-            {
-              "degree": "Ph.D. in Cognitive Science",
-              "institution": "ABC University",
-              "year": 2005
-            },
-            {
-              "degree": "M.Tech. in Biomedical Engineering",
-              "institution": "XYZ University",
-              "year": 2000
-            }
-          ]
-        ,
-        "workExperience": [
-          {
-            "position": "Associate Professor",
-            "institution": "ABC University",
-            "duration": "2005-2010"
-          },
-          {
-            "position": "Lecturer",
-            "institution": "XYZ University",
-            "duration": "2000-2005"
-          }
-        ],
-        "researchInterest": [
-          "Cognitive Science",
-          "Biomedical Signal Processing",
-          "Artificial Intelligence in Healthcare"
-        ],
-        "publications": [
-          {
-            "title": "Advances in Cognitive Science",
-            "journal": "Journal of Cognitive Research",
-            "year": 2022,
-            "link": "https://doi.org/10.12345/cogsciresearch"
-          },
-          {
-            "title": "Biomedical Signal Processing",
-            "journal": "International Journal of Medical Sciences",
-            "year": 2020,
-            "link": "https://doi.org/10.12345/medsci"
-          }
-        ],
-        "teachingTopics": [
-          "Biomedical Engineering",
-          "Neural Networks",
-          "Signal Processing"
-        ],
-        "doctoralStudents": [
-          {
-            "photo": "https://example.com/student1.jpg",
-            "type": "Full Time Research Scholar (BEAT)",
-            "subject": "Cognitive Science"
-          },
-          {
-            "photo": "https://example.com/student2.jpg",
-            "type": "Part Time Research Scholar",
-            "subject": "Biomedical Signal Processing"
-          }
-        ],
-        "pgStudents": [
-          {
-            "photo": "https://example.com/pgstudent1.jpg",
-            "type": "PG Student",
-            "subject": "Artificial Intelligence in Medicine"
-          }
-        ],
-        "ugStudents": [
-          {
-            "photo": "https://example.com/ugstudent1.jpg",
-            "type": "UG Student",
-            "subject": "Neural Networks"
-          }
-        ],
-        "awardsAndRecognition": [
-          {
-            "title": "Best Professor Award",
-            "year": 2018,
-            "organization": "National Science Foundation"
-          },
-          {
-            "title": "Excellence in Research Award",
-            "year": 2020,
-            "organization": "International Research Association"
-          }
-        ],
-        "administrativeResponsibilities": [
-          {
-            "position": "Head of the Department",
-            "duration": "2015-2020"
-          },
-          {
-            "position": "Dean of Research",
-            "duration": "2020-present"
-          }
-        ],
-        "contact": {
-          "email": "johndoe1@university.edu",
-          "phone": "+123-456-7890",
-          "office": "Room 401, Science Building"
-        },
-        "miscellaneous": [
-          "Member of the IEEE",
-          "Reviewer for the Journal of Neural Engineering"
-        ]
-      },
-
-
-
-      {
-        "_id": "6",
-        "name": "Dr. Jane Smith",
-        "photo": "https://example.com/photo2.jpg",
-        "professorType": "Associate Professor",
-        "collegeJoinYear": 2012,
-        "socialMedia": {
-          "website": "https://professorwebsite2.com",
-          "linkedin": "https://linkedin.com/in/professor2",
-          "twitter": "https://twitter.com/professor2",
-          "facebook": "https://facebook.com/professor2",
-          "googleScholar": "https://scholar.google.com/citations?user=professor2",
-          "researchGate": "https://researchgate.net/profile/professor2"
-        },
-        "publicationDetails": {
-          "totalPublications": 40,
-          "sponsoredProjects": 2,
-          "consultancyProjects": 1
-        },
-        "education": {
-          "doctoralStudents": 8,
-          "pgStudents": 12,
-          "ugStudents": 25
-        },
-        "ownEducation":
-          [
-            {
-              "degree": "Ph.D. in Cognitive Science",
-              "institution": "ABC University",
-              "year": 2005
-            },
-            {
-              "degree": "M.Tech. in Biomedical Engineering",
-              "institution": "XYZ University",
-              "year": 2000
-            }
-          ]
-        ,
-        "workExperience": [
-          {
-            "position": "Lecturer",
-            "institution": "ABC University",
-            "duration": "2008-2012"
-          }
-        ],
-        "researchInterest": [
-          "Machine Learning",
-          "Data Science",
-          "Robotics"
-        ],
-        "publications": [
-          {
-            "title": "Machine Learning Applications",
-            "journal": "Journal of AI Research",
-            "year": 2021,
-            "link": "https://doi.org/10.12345/airesearch"
-          },
-          {
-            "title": "Robotic Automation",
-            "journal": "Journal of Robotics",
-            "year": 2019,
-            "link": "https://doi.org/10.12345/robotics"
-          }
-        ],
-        "teachingTopics": [
-          "Data Science",
-          "Machine Learning",
-          "Artificial Intelligence"
-        ],
-        "doctoralStudents": [
-          {
-            "photo": "https://example.com/student3.jpg",
-            "type": "Full Time Research Scholar",
-            "subject": "Data Science"
-          },
-          {
-            "photo": "https://example.com/student4.jpg",
-            "type": "Part Time Research Scholar",
-            "subject": "Robotics"
-          }
-        ],
-        "pgStudents": [
-          {
-            "photo": "https://example.com/pgstudent2.jpg",
-            "type": "PG Student",
-            "subject": "Machine Learning"
-          }
-        ],
-        "ugStudents": [
-          {
-            "photo": "https://example.com/ugstudent2.jpg",
-            "type": "UG Student",
-            "subject": "Artificial Intelligence"
-          }
-        ],
-        "awardsAndRecognition": [
-          {
-            "title": "Innovator of the Year",
-            "year": 2020,
-            "organization": "Tech Innovators Association"
-          }
-        ],
-        "administrativeResponsibilities": [
-          {
-            "position": "Program Coordinator",
-            "duration": "2018-2021"
-          }
-        ],
-        "contact": {
-          "email": "janesmith@university.edu",
-          "phone": "+321-654-9870",
-          "office": "Room 402, Technology Building"
-        },
-        "miscellaneous": [
-          "Member of ACM",
-          "Keynote Speaker at AI Symposium"
-        ]
-      },
-
-
-
-      {
-        "_id": "7",
+        
         "name": "Dr. John Doe",
         "photo": "https://example.com/photo1.jpg",
         "professorType": "Full Professor",
@@ -903,7 +646,7 @@
 
 
       {
-        "_id": "8",
+        
         "name": "Dr. Jane Smith",
         "photo": "https://example.com/photo2.jpg",
         "professorType": "Associate Professor",
@@ -1024,7 +767,263 @@
 
 
       {
-        "_id": "9",
+       
+        "name": "Dr. John Doe",
+        "photo": "https://example.com/photo1.jpg",
+        "professorType": "Full Professor",
+        "collegeJoinYear": 2010,
+        "socialMedia": {
+          "website": "https://professorwebsite1.com",
+          "linkedin": "https://linkedin.com/in/professor1",
+          "twitter": "https://twitter.com/professor1",
+          "facebook": "https://facebook.com/professor1",
+          "googleScholar": "https://scholar.google.com/citations?user=professor1",
+          "researchGate": "https://researchgate.net/profile/professor1"
+        },
+        "publicationDetails": {
+          "totalPublications": 50,
+          "sponsoredProjects": 5,
+          "consultancyProjects": 3
+        },
+        "education": {
+          "doctoralStudents": 10,
+          "pgStudents": 15,
+          "ugStudents": 30
+        },
+        "ownEducation":
+          [
+            {
+              "degree": "Ph.D. in Cognitive Science",
+              "institution": "ABC University",
+              "year": 2005
+            },
+            {
+              "degree": "M.Tech. in Biomedical Engineering",
+              "institution": "XYZ University",
+              "year": 2000
+            }
+          ]
+        ,
+        "workExperience": [
+          {
+            "position": "Associate Professor",
+            "institution": "ABC University",
+            "duration": "2005-2010"
+          },
+          {
+            "position": "Lecturer",
+            "institution": "XYZ University",
+            "duration": "2000-2005"
+          }
+        ],
+        "researchInterest": [
+          "Cognitive Science",
+          "Biomedical Signal Processing",
+          "Artificial Intelligence in Healthcare"
+        ],
+        "publications": [
+          {
+            "title": "Advances in Cognitive Science",
+            "journal": "Journal of Cognitive Research",
+            "year": 2022,
+            "link": "https://doi.org/10.12345/cogsciresearch"
+          },
+          {
+            "title": "Biomedical Signal Processing",
+            "journal": "International Journal of Medical Sciences",
+            "year": 2020,
+            "link": "https://doi.org/10.12345/medsci"
+          }
+        ],
+        "teachingTopics": [
+          "Biomedical Engineering",
+          "Neural Networks",
+          "Signal Processing"
+        ],
+        "doctoralStudents": [
+          {
+            "photo": "https://example.com/student1.jpg",
+            "type": "Full Time Research Scholar (BEAT)",
+            "subject": "Cognitive Science"
+          },
+          {
+            "photo": "https://example.com/student2.jpg",
+            "type": "Part Time Research Scholar",
+            "subject": "Biomedical Signal Processing"
+          }
+        ],
+        "pgStudents": [
+          {
+            "photo": "https://example.com/pgstudent1.jpg",
+            "type": "PG Student",
+            "subject": "Artificial Intelligence in Medicine"
+          }
+        ],
+        "ugStudents": [
+          {
+            "photo": "https://example.com/ugstudent1.jpg",
+            "type": "UG Student",
+            "subject": "Neural Networks"
+          }
+        ],
+        "awardsAndRecognition": [
+          {
+            "title": "Best Professor Award",
+            "year": 2018,
+            "organization": "National Science Foundation"
+          },
+          {
+            "title": "Excellence in Research Award",
+            "year": 2020,
+            "organization": "International Research Association"
+          }
+        ],
+        "administrativeResponsibilities": [
+          {
+            "position": "Head of the Department",
+            "duration": "2015-2020"
+          },
+          {
+            "position": "Dean of Research",
+            "duration": "2020-present"
+          }
+        ],
+        "contact": {
+          "email": "johndoe1@university.edu",
+          "phone": "+123-456-7890",
+          "office": "Room 401, Science Building"
+        },
+        "miscellaneous": [
+          "Member of the IEEE",
+          "Reviewer for the Journal of Neural Engineering"
+        ]
+      },
+
+
+
+      {
+        
+        "name": "Dr. Jane Smith",
+        "photo": "https://example.com/photo2.jpg",
+        "professorType": "Associate Professor",
+        "collegeJoinYear": 2012,
+        "socialMedia": {
+          "website": "https://professorwebsite2.com",
+          "linkedin": "https://linkedin.com/in/professor2",
+          "twitter": "https://twitter.com/professor2",
+          "facebook": "https://facebook.com/professor2",
+          "googleScholar": "https://scholar.google.com/citations?user=professor2",
+          "researchGate": "https://researchgate.net/profile/professor2"
+        },
+        "publicationDetails": {
+          "totalPublications": 40,
+          "sponsoredProjects": 2,
+          "consultancyProjects": 1
+        },
+        "education": {
+          "doctoralStudents": 8,
+          "pgStudents": 12,
+          "ugStudents": 25
+        },
+        "ownEducation":
+          [
+            {
+              "degree": "Ph.D. in Cognitive Science",
+              "institution": "ABC University",
+              "year": 2005
+            },
+            {
+              "degree": "M.Tech. in Biomedical Engineering",
+              "institution": "XYZ University",
+              "year": 2000
+            }
+          ]
+        ,
+        "workExperience": [
+          {
+            "position": "Lecturer",
+            "institution": "ABC University",
+            "duration": "2008-2012"
+          }
+        ],
+        "researchInterest": [
+          "Machine Learning",
+          "Data Science",
+          "Robotics"
+        ],
+        "publications": [
+          {
+            "title": "Machine Learning Applications",
+            "journal": "Journal of AI Research",
+            "year": 2021,
+            "link": "https://doi.org/10.12345/airesearch"
+          },
+          {
+            "title": "Robotic Automation",
+            "journal": "Journal of Robotics",
+            "year": 2019,
+            "link": "https://doi.org/10.12345/robotics"
+          }
+        ],
+        "teachingTopics": [
+          "Data Science",
+          "Machine Learning",
+          "Artificial Intelligence"
+        ],
+        "doctoralStudents": [
+          {
+            "photo": "https://example.com/student3.jpg",
+            "type": "Full Time Research Scholar",
+            "subject": "Data Science"
+          },
+          {
+            "photo": "https://example.com/student4.jpg",
+            "type": "Part Time Research Scholar",
+            "subject": "Robotics"
+          }
+        ],
+        "pgStudents": [
+          {
+            "photo": "https://example.com/pgstudent2.jpg",
+            "type": "PG Student",
+            "subject": "Machine Learning"
+          }
+        ],
+        "ugStudents": [
+          {
+            "photo": "https://example.com/ugstudent2.jpg",
+            "type": "UG Student",
+            "subject": "Artificial Intelligence"
+          }
+        ],
+        "awardsAndRecognition": [
+          {
+            "title": "Innovator of the Year",
+            "year": 2020,
+            "organization": "Tech Innovators Association"
+          }
+        ],
+        "administrativeResponsibilities": [
+          {
+            "position": "Program Coordinator",
+            "duration": "2018-2021"
+          }
+        ],
+        "contact": {
+          "email": "janesmith@university.edu",
+          "phone": "+321-654-9870",
+          "office": "Room 402, Technology Building"
+        },
+        "miscellaneous": [
+          "Member of ACM",
+          "Keynote Speaker at AI Symposium"
+        ]
+      },
+
+
+
+      {
+       
         "name": "Dr. John Doe",
         "photo": "https://example.com/photo1.jpg",
         "professorType": "Full Professor",
@@ -1158,7 +1157,7 @@
 
 
       {
-        "_id": "10",
+        
         "name": "Dr. Jane Smith",
         "photo": "https://example.com/photo2.jpg",
         "professorType": "Associate Professor",
@@ -1279,7 +1278,7 @@
 
 
       {
-        "_id": "11",
+       
         "name": "Dr. John Doe",
         "photo": "https://example.com/photo1.jpg",
         "professorType": "Full Professor",
@@ -1411,5 +1410,5 @@
         ]
       }
     ]
-  }
+
   

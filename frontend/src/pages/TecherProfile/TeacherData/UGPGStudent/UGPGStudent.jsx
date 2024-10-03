@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './UGPGStudent.module.css';
+import SummaryApi from '../../../../common';
 
 const PGUGStudents = () => {
   const { id } = useParams();
@@ -9,9 +10,15 @@ const PGUGStudents = () => {
 
   const fetchStudents = async () => {
     try {
-      const response = await fetch('/Techer.json');
-      const data = await response.json();
-      const foundProfessor = data.professors.find((prof) => prof._id === id);
+      const response = await fetch(SummaryApi.GetCseProfProfile.url, {
+        method: SummaryApi.GetCseProfProfile.method,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id })
+      });
+      
+      const foundProfessor = await response.json();
       setPgStudents(foundProfessor.pgStudents);
       setUgStudents(foundProfessor.ugStudents);
     } catch (error) {

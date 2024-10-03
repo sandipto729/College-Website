@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './../TeacherData.module.css'
+import SummaryApi from '../../../../common';
 
 const WorkExperience = () => {
   const { id } = useParams();
@@ -8,9 +9,14 @@ const WorkExperience = () => {
 
   const fetchWorkExperience = async () => {
     try {
-      const response = await fetch('/Techer.json');
-      const data = await response.json();
-      const foundWorkExperience = data.professors.find((prof) => prof._id === id);
+      const response = await fetch(SummaryApi.GetCseProfProfile.url, {
+        method: SummaryApi.GetCseProfProfile.method,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id })
+      });
+      const foundWorkExperience = await response.json();
       setWorkExperience(foundWorkExperience.workExperience);
       console.log(foundWorkExperience.workExperience);
     } catch (error) {

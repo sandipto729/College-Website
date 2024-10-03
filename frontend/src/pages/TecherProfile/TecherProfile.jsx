@@ -5,24 +5,34 @@ import { CiMail } from "react-icons/ci";
 import { FaInternetExplorer, FaFacebook, FaResearchgate, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { SiGooglescholar } from "react-icons/si";
 import { IoMenu } from "react-icons/io5";
+import SummaryApi from '../../common/index';
 
 const TeacherProfile = () => {
   const { id } = useParams();
-  const location = useLocation(); // Get current location
+  const location = useLocation();
   const [professor, setProfessor] = useState(null);
   const [check, setCheck] = useState(true);
 
-  // Fetch professor information
   const fetchProfessor = async () => {
     try {
-      const response = await fetch('/Techer.json');
-      const data = await response.json();
-      const foundProfessor = data.professors.find((prof) => prof._id === id);
+      const response = await fetch(SummaryApi.GetCseProfProfile.url, {
+        method: SummaryApi.GetCseProfProfile.method,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id })
+      });
+      if (!response.ok) {
+        throw new Error('Failed to fetch professor data');
+      }
+      const foundProfessor = await response.json();
       setProfessor(foundProfessor);
     } catch (error) {
       console.error("Error fetching professor:", error);
+      alert("There was a problem fetching the professor's data. Please try again later.");
     }
   };
+
 
   useEffect(() => {
     fetchProfessor();
@@ -50,7 +60,6 @@ const TeacherProfile = () => {
   if (!professor) {
     return <div>Loading...</div>;
   }
-
 
   const isActive = (path) => location.pathname.includes(path);
 
@@ -83,7 +92,7 @@ const TeacherProfile = () => {
               <Link to={`/professor/${id}/publications/${id}`}>
                 <div className={styles.box}>
                   <p>Publications</p>
-                  <p>{professor.publicationDetails.totalPublications}</p>
+                  <p>{professor.publications.length}</p>
                 </div>
               </Link>
               <div className={styles.box}>
@@ -99,29 +108,24 @@ const TeacherProfile = () => {
           <div className={styles.edu}>
             <p>Education</p>
             <div className={styles.eduChat}>
-
               <Link to={`/professor/${id}/ugpgstudents/${id}`}>
                 <div className={styles.box}>
                   <p>Undergraduate</p>
                   <p>{professor.ugStudents.length}</p>
                 </div>
               </Link>
-
-
               <Link to={`/professor/${id}/ugpgstudents/${id}`}>
                 <div className={styles.box}>
                   <p>Postgraduate</p>
                   <p>{professor.pgStudents.length}</p>
                 </div>
               </Link>
-
               <Link to={`/professor/${id}/doctoralstudents/${id}`}>
                 <div className={styles.box}>
                   <p>Doctoral</p>
                   <p>{professor.doctoralStudents.length}</p>
                 </div>
               </Link>
-
             </div>
           </div>
         </div>
