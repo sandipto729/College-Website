@@ -31,7 +31,7 @@ const ContactUs = () => {
     <div className={styles.formContainer}>
 
       <div className={styles.contactDetails}>
-        
+
         <p>Department of Computer Science and Engineering</p>
         <p>NIT Durgapur</p>
         <p>Mahatma Gandhi Avenue</p>
@@ -44,14 +44,14 @@ const ContactUs = () => {
 
       <div className={styles.contactForm}>
         <form ref={form} onSubmit={sendEmail} >
-          <label className={styles.formLabel}>Name</label>
-          <input type="text" name="from_name" className={styles.formInput} />
+          {/* <label className={styles.formLabel}>Name</label> */}
+          <input type="text" name="from_name" className={styles.formInput} placeholder='Name'/>
 
-          <label className={styles.formLabel}>Email</label>
-          <input type="email" name="from_email" className={styles.formInput} />
+          {/* <label className={styles.formLabel}>Email</label> */}
+          <input type="email" name="from_email" className={styles.formInput} placeholder='Email' />
 
-          <label className={styles.formLabel}>Message</label>
-          <textarea name="message" className={styles.formTextarea}></textarea>
+          {/* <label className={styles.formLabel}>Message</label> */}
+          <textarea name="message" className={styles.formTextarea} placeholder='Message'></textarea>
 
           <input type="submit" value="Send" className={styles.formButton} />
         </form>
