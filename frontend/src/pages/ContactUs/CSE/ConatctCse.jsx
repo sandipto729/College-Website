@@ -45,13 +45,13 @@ const ContactUs = () => {
       <div className={styles.contactForm}>
         <form ref={form} onSubmit={sendEmail} >
           {/* <label className={styles.formLabel}>Name</label> */}
-          <input type="text" name="from_name" className={styles.formInput} placeholder='Name'/>
+          <input type="text" name="from_name" className={styles.formInput} required={true} placeholder='Name'/>
 
           {/* <label className={styles.formLabel}>Email</label> */}
-          <input type="email" name="from_email" className={styles.formInput} placeholder='Email' />
+          <input type="email" name="from_email" className={styles.formInput} required={true} placeholder='Email' />
 
           {/* <label className={styles.formLabel}>Message</label> */}
-          <textarea name="message" className={styles.formTextarea} placeholder='Message'></textarea>
+          <textarea name="message" className={styles.formTextarea} required={true} placeholder='Message'></textarea>
 
           <input type="submit" value="Send" className={styles.formButton} />
         </form>

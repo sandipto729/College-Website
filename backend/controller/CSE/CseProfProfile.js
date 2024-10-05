@@ -1,7 +1,7 @@
 const CseProfModel = require("./../../models/CSE/CseProf");
 const getCseProfProfile = async (req, res) => {
     try {
-        console.log(req.body);
+        // console.log(req.body);
         const cseProfData = await CseProfModel.findById(req.body.id);
         if (!cseProfData) {
             return res.status(404).json({ error: "Professor not found" });

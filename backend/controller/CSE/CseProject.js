@@ -1,23 +1,31 @@
-const CseProjectModel = require("./../../public/project.json");
+const CseProjectModel = require("./../../models/CSE/CseProject");
 const CseProfModel = require("./../../models/CSE/CseProf");
 
 const CseProjectController = async (req, res) => {
   try {
     const ProfId = req.body.id;
-    console.log(ProfId);
-    const response = await CseProfModel.findById(ProfId);
-    console.log(response);
     
-    const ProfName = response.name;
+    // Fetch the professor's data
+    const professor = await CseProfModel.findById(ProfId);
 
-    const SponseredProject = CseProjectModel.sponsered.filter(
-      (project) => project["Name of the PI"] === ProfName
-    );
+    if (!professor) {
+      return res.status(404).json({ error: "Professor not found" });
+    }
 
-    const ConsultancyProject = CseProjectModel.consultancy.filter(
-      (project) => project["Name of the PI"] === ProfName
-    );
+    const ProfName = professor.name;
+    console.log("Professor Name:", ProfName);
 
+    // Fetch the project data for the professor
+    const SponseredProject = await CseProjectModel.find({ 
+      "NameofthePI": ProfName,
+      "type": "Sponsored"
+     });
+     
+    const ConsultancyProject = await CseProjectModel.find({ "NameofthePI": ProfName, "type": "Consultancy" });
+    // If both are empty
+    if (!SponseredProject.length && !ConsultancyProject.length) {
+      return res.status(404).json({ error: "No projects found for this professor" });
+    }
     res.json({
       sponsered: SponseredProject,
       consultancy: ConsultancyProject,

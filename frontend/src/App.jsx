@@ -14,7 +14,7 @@ function App() {
   return (
     <>
     <NewsBar/>
-    {/* <ContactUs/> */}
+    <ContactUs/>
     <ToastContainer />
       <Outlet />
     </>
