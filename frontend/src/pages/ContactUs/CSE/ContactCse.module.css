@@ -13,16 +13,26 @@
     text-align: center;
     
   }
+  .contactDetails {
+    transform-style: preserve-3d;
+    border: 1px solid rgb(191, 190, 190);
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    /* transform: rotateX(0deg) rotateY(40deg) translateZ(50px);  */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  }
   .contactForm{
     width: 30%;
+    /* padding: 1rem; */
     background-color: rgb(221, 221, 221);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 1px solid rgb(191, 190, 190);
-    padding: 0.5rem;
+    padding: 1.1rem;
     border-radius: 0.2rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   }
   
   .formLabel {
