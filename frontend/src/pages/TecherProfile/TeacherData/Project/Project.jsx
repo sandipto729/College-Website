@@ -21,7 +21,7 @@ const ProjectDetails = () => {
       const projectData = await response.json();
       setSponsoredProjects(projectData.sponsered || []);
       setConsultancyProjects(projectData.consultancy || []);
-      
+
       console.log('Fetched Projects:', projectData);
     } catch (error) {
       console.error("Error fetching project details:", error);
@@ -50,13 +50,14 @@ const ProjectDetails = () => {
         {projects.map((project, index) => (
           <tr key={index}>
             <td>{project?.Title || 'N/A'}</td>
-            <td>{project?.["Name of the PI"] || 'N/A'}</td>
-            <td>{project?.["Name of the CoPIs"]?.join(', ') || 'N/A'}</td>
-            <td>{project?.["Funding Agency"] || 'N/A'}</td>
-            <td>{project?.["Amount (Rs.)"] || 'N/A'}</td>
-            <td>{project?.["Project Status"] || 'N/A'}</td>
-            <td>{project?.["Date of Initiation"] || 'N/A'}</td>
-            <td>{project?.["Date of Completion"] || 'N/A'}</td>
+            <td>{project?.NameofthePI || 'N/A'}</td>
+            <td>{project?.NameoftheCoPIs?.join(', ') || 'N/A'}</td>
+            <td>{project?.FundingAgency || 'N/A'}</td>
+            <td>{project?.Amount || 'N/A'}</td>
+            <td>{project?.ProjectStatus || 'N/A'}</td>
+            <td>{project?.DateofInitiation || 'N/A'}</td>
+            <td>{project?.DateofCompletion || 'N/A'}</td>
+
           </tr>
         ))}
       </tbody>
@@ -69,7 +70,7 @@ const ProjectDetails = () => {
 
       {/* Sponsored Projects Section */}
       <div>
-        <h4>Sponsored Projects</h4>
+        <h4>Sponsered Projects</h4>
         {sponsoredProjects.length > 0 ? renderTable(sponsoredProjects) : <p>No sponsored projects available.</p>}
       </div>
 
