@@ -30,7 +30,7 @@ const WorkExperience = () => {
 
   return (
     <div>
-      <h3>Work Experience</h3>
+      <h3 className='text-center font-bold text-1.2xl p-2'>Work Experience</h3>
       <table className={styles.Table}>
         <thead>
           <tr>

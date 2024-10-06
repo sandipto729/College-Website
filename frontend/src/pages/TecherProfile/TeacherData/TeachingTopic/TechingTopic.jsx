@@ -31,7 +31,7 @@ const TeachingTopics = () => {
 
   return (
     <div>
-      <h3>Teaching Topics</h3>
+      <h3 className='text-center font-bold text-1.2xl p-2'>Teaching Topics</h3>
       <table className={styles.Table}>
         <thead>
           <tr>

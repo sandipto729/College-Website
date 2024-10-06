@@ -32,7 +32,7 @@ const PGUGStudents = () => {
 
   return (
     <div>
-      <h3>PG Students</h3>
+      <h3 style={{ textAlign: 'center' }}>PG Students</h3>
       <div className={styles.gridContainer}>
         {pgStudents.map((student, index) => (
           <div className={styles.card} key={index}>
@@ -45,7 +45,7 @@ const PGUGStudents = () => {
         ))}
       </div>
 
-      <h3>UG Students</h3>
+      <h3 className='text-center font-bold text-1.2xl p-2'>UG Students</h3>
       <div className={styles.gridContainer}>
         {ugStudents.map((student, index) => (
           <div className={styles.card} key={index}>

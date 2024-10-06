@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
-import styles from './TecherProfile.module.css';
-import { CiMail } from "react-icons/ci";
+import styles from './TecherProfile.module.scss';
+import { IoMdMail } from "react-icons/io";
 import { FaInternetExplorer, FaFacebook, FaResearchgate, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { SiGooglescholar } from "react-icons/si";
 import { IoMenu } from "react-icons/io5";
@@ -38,7 +38,7 @@ const TeacherProfile = () => {
     }
   };
 
-  
+
   const fetchProjects = async () => {
     try {
       const response = await fetch(SummaryApi.GetCseProjectDetails.url, {
@@ -52,7 +52,7 @@ const TeacherProfile = () => {
       const projectData = await response.json();
       setSponsoredProjects(projectData.sponsered || []);
       setConsultancyProjects(projectData.consultancy || []);
-      
+
       console.log('Fetched Projects:', projectData);
     } catch (error) {
       console.error("Error fetching project details:", error);
@@ -94,13 +94,16 @@ const TeacherProfile = () => {
     <div className={styles.container}>
       <div className={styles.leftBar}>
         <img src={`${professor.photo}`} alt={`${professor.name}`} />
-        <p>{professor.name}</p>
-        <p>{professor.professorType}</p>
-        <p>Joined the college on {professor.collegeJoinYear}</p>
-        <p>
-          <CiMail />
-          <p>{professor.contact.email}</p>
+        <p className='font-bold'>{professor.name}</p>
+        <p className='text-xs'>{professor.professorType}</p>
+        <p className='text-xs'>Joined the college on <p className='font-bold'>{professor.collegeJoinYear}</p></p>
+        <p className='flex flex-col items-center justify-center'>
+          <IoMdMail className='mb-2' />
+          <a href={`mailto:${professor.contact.email}`} className="text-white hover:text-yellow-500">
+            {professor.contact.email}
+          </a>
         </p>
+
         <div className={styles.socialMedia}>
           <p><a href={professor.socialMedia.website}><FaInternetExplorer /></a></p>
           <p><a href={professor.socialMedia.linkedin}><FaLinkedin /></a></p>
