@@ -29,7 +29,7 @@ const AwardsAndRecognition = () => {
 
   return (
     <div>
-      <h3>Awards and Recognition</h3>
+      <h3 style={{ textAlign: 'center' }}>Awards and Recognition</h3>
       <table className={styles.Table}>
         <thead>
           <tr>

@@ -30,7 +30,7 @@ const AdministrativeResponsibilities = () => {
 
   return (
     <div>
-      <h3>Administrative Responsibilities</h3>
+      <h3 style={{ textAlign: 'center' }}>Administrative Responsibilities</h3>
       <table className={styles.Table}>
         <thead>
           <tr>

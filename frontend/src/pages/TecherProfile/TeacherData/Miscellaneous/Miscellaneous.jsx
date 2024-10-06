@@ -30,7 +30,7 @@ const Miscellaneous = () => {
 
   return (
     <div className={styles.miscContainer}>
-      <h3>Miscellaneous</h3>
+      <h3 style={{ textAlign: 'center' }}>Miscellaneous</h3>
       <ul className={styles.miscList}>
         {miscellaneous.map((item, index) => (
           <li key={index}>{index + 1}. {item}</li>

@@ -30,7 +30,7 @@ const WorkExperience = () => {
 
   return (
     <div>
-      <h3>Work Experience</h3>
+      <h3 style={{ textAlign: 'center' }}>Work Experience</h3>
       <table className={styles.Table}>
         <thead>
           <tr>

@@ -66,7 +66,7 @@ const ProjectDetails = () => {
 
   return (
     <div>
-      <h3>Project Details</h3>
+      <h3 style={{ textAlign: 'center' }}>Project Details</h3>
 
       {/* Sponsored Projects Section */}
       <div>
