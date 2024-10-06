@@ -31,7 +31,7 @@ const ResearchInterest = () => {
 
   return (
     <div>
-      <h3>Research Interests</h3>
+      <h3 style={{ textAlign: 'center' }}>Research Interests</h3>
       <table className={styles.Table}>
         <thead>
           <tr>

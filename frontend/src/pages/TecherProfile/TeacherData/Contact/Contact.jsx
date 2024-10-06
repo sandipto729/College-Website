@@ -30,7 +30,7 @@ const Contact = () => {
 
   return (
     <div>
-      <h3>Contact Information</h3>
+      <h3 style={{ textAlign: 'center' }}>Contact Information</h3>
       <table className={styles.Table}>
         <thead>
           <tr>

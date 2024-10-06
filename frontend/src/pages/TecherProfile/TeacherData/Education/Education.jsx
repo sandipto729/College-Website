@@ -32,7 +32,7 @@ const Education = () => {
 
   return (
     <div>
-      <h3>Education</h3>
+      <h3 style={{ textAlign: 'center' }}>Education</h3>
       <table className={styles.Table}>
         <thead>
           <tr>

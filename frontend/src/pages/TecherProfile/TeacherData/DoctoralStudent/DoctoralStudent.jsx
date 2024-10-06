@@ -30,7 +30,7 @@ const DoctoralStudents = () => {
 
   return (
     <div>
-      <h3>Doctoral Students</h3>
+      <h3 style={{ textAlign: 'center' }}>Doctoral Students</h3>
       <div className={styles.gridContainer}>
         {doctoralStudents.map((student, index) => (
           <div className={styles.card} key={index}>
