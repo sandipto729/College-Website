@@ -94,17 +94,16 @@ const TeacherProfile = () => {
     <div className={styles.container}>
       <div className={styles.leftBar}>
         <img src={`${professor.photo}`} alt={`${professor.name}`} />
-        <p style={{ fontWeight: 'bold' }}>{professor.name}</p>
-        <p style={{ fontSize: '15px' }}>{professor.professorType}</p>
-        <p style={{ fontSize: '15px' }}>Joined the college on <p style={{ fontWeight: 'bold' }}>{professor.collegeJoinYear}</p></p>
-        <p>
-          <IoMdMail />
-          <p>
-            <a href={`mailto:${professor.contact.email}`} className={styles.mail}>
-              {professor.contact.email}
-            </a>
-          </p>
+        <p className='font-bold'>{professor.name}</p>
+        <p className='text-xs'>{professor.professorType}</p>
+        <p className='text-xs'>Joined the college on <p className='font-bold'>{professor.collegeJoinYear}</p></p>
+        <p className='flex flex-col items-center justify-center'>
+          <IoMdMail className='mb-2' />
+          <a href={`mailto:${professor.contact.email}`} className="text-white hover:text-yellow-500">
+            {professor.contact.email}
+          </a>
         </p>
+
         <div className={styles.socialMedia}>
           <p><a href={professor.socialMedia.website}><FaInternetExplorer /></a></p>
           <p><a href={professor.socialMedia.linkedin}><FaLinkedin /></a></p>

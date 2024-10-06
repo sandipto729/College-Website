@@ -5,6 +5,7 @@ import styles from './DisplayFaculty.module.css';
 import { NavLink } from 'react-router-dom';
 import SummaryApi from '../../common/index';
 
+
 const DisplayFaculty = () => {
   const [facultyData, setFacultyData] = useState({ present: [], retired: [] });
   const [showPresent, setShowPresent] = useState(true);
@@ -17,9 +18,9 @@ const DisplayFaculty = () => {
           method: SummaryApi.GetCseProf.method,
         });
         const data = await response.json();
-
+        console.log(data);
         setFacultyData({
-          present: data.presentFaculty || [], 
+          present: data.cseProfData || [], 
           retired: data.retiredFaculty || [], 
         });
       } catch (error) {
@@ -83,7 +84,7 @@ const DisplayFaculty = () => {
             </p>
             <p className={styles.facultyPhone}><PhoneIcon />: {member.contact.phone}</p>
             <p className={styles.facultyJoined}>Joined: {member.collegeJoinYear}</p>
-            <NavLink to={`/professor/${member.id}`} className={styles.detailsButton}>
+            <NavLink to={`/professor/${member._id}`} className={styles.detailsButton}>
               View Details
             </NavLink>
           </div>
@@ -94,4 +95,5 @@ const DisplayFaculty = () => {
 };
 
 export default DisplayFaculty;
+
 
