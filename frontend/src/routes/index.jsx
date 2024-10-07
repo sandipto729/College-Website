@@ -16,6 +16,7 @@ import ConactProf from './../pages/TecherProfile/TeacherData/Contact/Contact';
 import MiscellaneousProf from './../pages/TecherProfile/TeacherData/Miscellaneous/Miscellaneous'
 import CseProject from './../pages/TecherProfile/TeacherData/Project/Project';
 import DisplayFaculty from '../pages/Faculty/DisplayFaculty';
+import HodCse from '../pages/Faculty/HodCse';
 
 const routers = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const routers = createBrowserRouter([
   {
     path:'/professor',
     element: <DisplayFaculty />,
+  },
+  {
+    path: '/professor/hod',
+    element: <HodCse />,
   },
   {
     path: '/professor/:id',

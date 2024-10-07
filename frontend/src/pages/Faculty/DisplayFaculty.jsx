@@ -80,16 +80,16 @@ const DisplayFaculty = () => {
             </div>
             {/* Research Interest and Contact Info */}
             <div className="text-center flex-grow">
-              <p className={`${styles.facultyResearch} line-clamp`}>
+              <p className={`${styles.facultyResearch}`}>
                 <strong>Research Interest:</strong> {member.researchInterest}
               </p>
               <p className={styles.facultyEmail}>
-                <EmailIcon/>: <a href={`mailto:${member.email}`} className="text-blue-500 underline">{member.email}</a>
+                <EmailIcon/>: <a href={`mailto:${member.contact.email}`} className="text-blue-500 underline">{member.contact.email}</a>
               </p>
               <p className={styles.facultyPhone}>
-                <PhoneIcon />: <a href={`tel:${member.phone}`} className="text-blue-500 underline">{member.phone}</a>
+                <PhoneIcon />: <a href={`tel:${member.contact.phone}`} className="text-blue-500 underline">{member.contact.phone}</a>
               </p>
-              <p className={styles.facultyJoined}>Joined: {member.joined}</p>
+              <p className={styles.facultyJoined}>Joined: {member.collegeJoinYear}</p>
             </div>
             {/* View Details Button */}
             <NavLink to={`/professor/${member._id}`} className={styles.detailsButton}>

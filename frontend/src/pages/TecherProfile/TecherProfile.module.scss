@@ -170,9 +170,11 @@
 .rightBar li a:hover {
     background-color: #ff7043; /* Bright orange */
     color: #fff;
+    border-radius: 1rem;
   }
   .rightBarList li.active {
     background-color: #d4d2d2; /* Highlight the active menu item */
+    border-radius: 1rem;
   }
   
   .menu{

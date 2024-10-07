@@ -48,7 +48,7 @@ const Publications = () => {
               <td>{publication?.journal}</td>
               <td>{publication?.year}</td>
               <td>
-                <a href={publication?.link} target="_blank" rel="noopener noreferrer">
+                <a href={publication?.link} target="_blank" rel="noopener noreferrer" className='text-blue-500 underline'>
                   View
                 </a>
               </td>
