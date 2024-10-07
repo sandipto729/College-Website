@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Mr. John Doe",
+      "photo": "https://example.com/photo/john_doe.jpg",
+      "type": "Professor",
+      "collegeJoinYear": 2005,
+      "contact": {
+        "email": "john.doe@example.com",
+        "phone": 9876543210
+      },
+      "createdAt": "2024-10-06T14:22:35.000Z",
+      "updatedAt": "2024-10-06T14:22:35.000Z"
+    },
+    {
+      "name": "Mr. Jane Smith",
+      "photo": "https://example.com/photo/jane_smith.jpg",
+      "type": "Assistant Professor",
+      "collegeJoinYear": 2010,
+      "contact": {
+        "email": "jane.smith@example.com",
+        "phone": 8765432109
+      },
+      "createdAt": "2024-10-06T14:22:35.000Z",
+      "updatedAt": "2024-10-06T14:22:35.000Z"
+    },
+    {
+      "name": "Mr. Alan Brown",
+      "photo": "https://example.com/photo/alan_brown.jpg",
+      "type": "Lecturer",
+      "collegeJoinYear": 2015,
+      "contact": {
+        "email": "alan.brown@example.com",
+        "phone": 7654321098
+      },
+      "createdAt": "2024-10-06T14:22:35.000Z",
+      "updatedAt": "2024-10-06T14:22:35.000Z"
+    }
+  ]
+  

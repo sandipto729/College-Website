@@ -19,6 +19,7 @@ const TeacherProfile = () => {
 
 
   const fetchProfessor = async () => {
+    console.log(id);
     try {
       const response = await fetch(SummaryApi.GetCseProfProfile.url, {
         method: SummaryApi.GetCseProfProfile.method,
