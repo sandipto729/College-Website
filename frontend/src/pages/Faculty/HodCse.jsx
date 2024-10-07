@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import EmailIcon from '@mui/icons-material/Email';
-import PhoneIcon from '@mui/icons-material/Phone';
 import styles from './DisplayFaculty.module.css';
-import { NavLink } from 'react-router-dom';
 import SummaryApi from '../../common/index';
+import FacultyCard from './../../component/CardModel/CardModel'
 
 const HodCse = () => {
     const [hodFaculty, setHodFaculty] = useState(null);
@@ -29,9 +27,9 @@ const HodCse = () => {
             setHodFaculty(data);
         } catch (error) {
             console.error('Error fetching faculty data:', error);
-            setError('Failed to load faculty data'); // Set error message
+            setError('Failed to load faculty data'); 
         } finally {
-            setLoading(false); // Set loading to false after data fetching
+            setLoading(false);
         }
     };
 
@@ -40,14 +38,14 @@ const HodCse = () => {
     }, []);
 
     if (loading) {
-        return <div>Loading...</div>; 
+        return <div>Loading...</div>;
     }
 
     if (error) {
-        return <div>{error}</div>; 
+        return <div>{error}</div>;
     }
 
-   
+
     if (!hodFaculty) {
         return <div>No faculty data available.</div>;
     }
@@ -66,40 +64,19 @@ const HodCse = () => {
                         </div>
                     </div>
                 </div>
-
-                <div className={`${styles.facultyCard} flex flex-col justify-center items-center`}>
-                    <div className="flex flex-col items-center justify-center">
-                        <div className="relative w-full h-full flex justify-center items-center pt-3 pb-3 bg-white">
-                            <div className="w-30 h-30 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1 mt-1 mb-1">
-                                <div className="w-full h-full rounded-full bg-white p-1 flex justify-center items-center ">
-                                    <img
-                                        className="w-30 h-30 rounded-full object-cover"
-                                        src={hodFaculty.photo}
-                                        alt={`Profile of ${hodFaculty.name}`}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <h3 className={styles.facultyName}>{hodFaculty.name}</h3>
-                        <p className={styles.facultyPosition}>{hodFaculty.professorType}</p>
-                    </div>
-                    {/* Research Interest and Contact Info */}
-                    <div className="text-center flex-grow">
-                        <p className={`${styles.facultyResearch}`}>
-                            <strong>Research Interest:</strong> {hodFaculty.researchInterest}
-                        </p>
-                        <p className={styles.facultyEmail}>
-                            <EmailIcon />: <a href={`mailto:${hodFaculty.contact.email}`} className="text-blue-500 underline">{hodFaculty.contact.email}</a>
-                        </p>
-                        <p className={styles.facultyPhone}>
-                            <PhoneIcon />: <a href={`tel:${hodFaculty.contact.phone}`} className="text-blue-500 underline">{hodFaculty.contact.phone}</a>
-                        </p>
-                        <p className={styles.facultyJoined}>Joined: {hodFaculty.collegeJoinYear}</p>
-                    </div>
-                    {/* View Details Button */}
-                    <NavLink to={`/professor/${hodFaculty._id}`} className={styles.detailsButton}>
-                        View Details
-                    </NavLink>
+                <div className={styles.ProfCard}>
+                    <FacultyCard 
+                        faculty={{
+                            photo: hodFaculty.photo,
+                            name: hodFaculty.name,
+                            professorType: hodFaculty.professorType,
+                            researchInterest: hodFaculty.researchInterest,
+                            email: hodFaculty.contact.email,
+                            phone: hodFaculty.contact.phone,
+                            collegeJoinYear: hodFaculty.collegeJoinYear,
+                            id: hodFaculty._id
+                        }}
+                    />
                 </div>
             </div>
         </div>
