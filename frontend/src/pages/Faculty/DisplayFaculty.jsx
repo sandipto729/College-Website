@@ -5,6 +5,7 @@ import styles from './DisplayFaculty.module.css';
 import { NavLink } from 'react-router-dom';
 import SummaryApi from '../../common/index';
 
+
 const DisplayFaculty = () => {
   const [facultyData, setFacultyData] = useState({ present: [], retired: [] });
   const [showPresent, setShowPresent] = useState(true);
@@ -17,9 +18,9 @@ const DisplayFaculty = () => {
           method: SummaryApi.GetCseProf.method,
         });
         const data = await response.json();
-
+        console.log(data);
         setFacultyData({
-          present: data.presentFaculty || [], 
+          present: data.cseProfData || [], 
           retired: data.retiredFaculty || [], 
         });
       } catch (error) {
@@ -59,14 +60,15 @@ const DisplayFaculty = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="flex flex-wrap justify-center gap-6">
         {(showPresent ? facultyData.present : facultyData.retired).map((member) => (
-          <div key={member.name} className={styles.facultyCard}>
-            <div className="relative flex justify-center items-center bg-slate-200 mb-0">
-              <div className="w-32 h-32 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1 mt-1 mb-1">
+          <div key={member.name}  className={`${styles.facultyCard} flex flex-col`}>
+            <div className="flex flex-col items-center">
+            <div className="relative w-full h-full flex justify-center items-center pt-3 pb-3 bg-white">
+              <div className="w-30 h-30 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1 mt-1 mb-1">
                 <div className="w-full h-full rounded-full bg-white p-1 flex justify-center items-center ">
                   <img
-                    className="w-32 h-32 rounded-full object-cover"
+                    className="w-30 h-30 rounded-full object-cover"
                     src={member.photo}
                     alt={`Profile of ${member.name}`}
                   />
@@ -75,15 +77,22 @@ const DisplayFaculty = () => {
             </div>
             <h3 className={styles.facultyName}>{member.name}</h3>
             <p className={styles.facultyPosition}>{member.professorType}</p>
-            <p className={styles.facultyResearch}>
-              <strong>Research Interest:</strong> {member.researchInterest}
-            </p>
-            <p className={styles.facultyEmail}>
-              <EmailIcon className="to-black" />: <a href={`mailto:${member.email}`} className="text-blue-500 underline">{member.contact.email}</a>
-            </p>
-            <p className={styles.facultyPhone}><PhoneIcon />: {member.contact.phone}</p>
-            <p className={styles.facultyJoined}>Joined: {member.collegeJoinYear}</p>
-            <NavLink to={`/professor/${member.id}`} className={styles.detailsButton}>
+            </div>
+            {/* Research Interest and Contact Info */}
+            <div className="text-center flex-grow">
+              <p className={`${styles.facultyResearch} line-clamp`}>
+                <strong>Research Interest:</strong> {member.researchInterest}
+              </p>
+              <p className={styles.facultyEmail}>
+                <EmailIcon/>: <a href={`mailto:${member.email}`} className="text-blue-500 underline">{member.email}</a>
+              </p>
+              <p className={styles.facultyPhone}>
+                <PhoneIcon />: <a href={`tel:${member.phone}`} className="text-blue-500 underline">{member.phone}</a>
+              </p>
+              <p className={styles.facultyJoined}>Joined: {member.joined}</p>
+            </div>
+            {/* View Details Button */}
+            <NavLink to={`/professor/${member._id}`} className={styles.detailsButton}>
               View Details
             </NavLink>
           </div>
@@ -94,4 +103,5 @@ const DisplayFaculty = () => {
 };
 
 export default DisplayFaculty;
+
 
