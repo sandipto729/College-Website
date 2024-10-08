@@ -1,8 +1,4 @@
-{
-    "page": "Facilities",
-    "status":"ok",
-    "totalResults":3,
-    "labs": [
+ [
       {
         "name": "VLSI",
         "description": "This lab provides hands-on experience in Very Large Scale Integration (VLSI) design, enabling students to design and simulate complex integrated circuits.",
@@ -27,5 +23,4 @@
         "description": "This lab focuses on computer graphics techniques and computer vision algorithms, allowing students to create visual simulations and process images."
       }
     ]
-  }
   

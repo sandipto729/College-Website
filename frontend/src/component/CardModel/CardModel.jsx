@@ -32,10 +32,10 @@ const CardModel = ({ faculty }) => {
           {email.length>0 && <p className={styles.facultyEmail}>
             <EmailIcon />: <a href={`mailto:${email}`} className="text-blue-500 underline">{email}</a>
           </p>}
-          {<p className={styles.facultyPhone}>
+          {(phone.length>0 || phone) && <p className={styles.facultyPhone}>
             <PhoneIcon />: <a href={`tel:${phone}`} className="text-blue-500 underline">{phone}</a>
           </p>}
-          {collegeJoinYear.length>0 && <p className={styles.facultyJoined}>Joined: {collegeJoinYear}</p>}
+          {(collegeJoinYear.length>0 || collegeJoinYear)&& <p className={styles.facultyJoined}>Joined: {collegeJoinYear}</p>}
         </div>
         {id.length>0 && <NavLink to={`/professor/${id}`} className={styles.detailsButton}>
           View Details
