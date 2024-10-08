@@ -1,10 +1,12 @@
-/* Container for the entire profile page */
 .container {
+    margin: 1rem;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    flex-wrap: wrap;
+    width: 98vw;
     min-height: 100vh;
-    background-color: #fff5e6; /* Light orange background for a warm tone */
+    background-color: #fff5e6; 
+    // overflow-x: hidden;
   }
   
 /* Left bar containing profile details */
@@ -35,13 +37,8 @@
     text-align: center;
     color: #ffffff; /* Dark brown for a bold contrast */
   }
-  .mail{
-    color: white;
-  }
-  .mail:hover{
-    color: #ffc739;
-  }
   
+
 /* Social media section */
 .socialMedia {
     margin-top: 20px;
@@ -62,7 +59,7 @@
   
 /* Middle bar for publication and education details */
 .middleBar {
-    width: 60%;
+    width: 62.5%;
     padding: 20px;
     background: hsla(217, 100%, 50%, 1);
     border-radius: 1rem;
@@ -116,6 +113,7 @@
   
 .box:hover {
     transform: scale(1.05);
+    overflow:visible;
     background-color: #bbbbbb; /* Brighter coral on hover */
   }
   
@@ -128,7 +126,8 @@
   
 /* Right bar for navigation */
 .rightBar {
-    width: 15%;
+    // width: 15%;
+    width: calc(99.3% - 20% - 62.5%);
     background: hsla(20, 85%, 60%, 1);
 
     background: linear-gradient(225deg, hsla(20, 85%, 60%, 1) 0%, hsla(27, 86%, 61%, 1) 8%, hsla(39, 89%, 62%, 1) 99%, hsla(58, 100%, 68%, 1) 100%, hsla(56, 99%, 67%, 1) 100%);
@@ -171,9 +170,11 @@
 .rightBar li a:hover {
     background-color: #ff7043; /* Bright orange */
     color: #fff;
+    border-radius: 1rem;
   }
   .rightBarList li.active {
     background-color: #d4d2d2; /* Highlight the active menu item */
+    border-radius: 1rem;
   }
   
   .menu{
@@ -208,3 +209,6 @@
     }
 }
 
+.container{
+  overflow-x: hidden;
+}
