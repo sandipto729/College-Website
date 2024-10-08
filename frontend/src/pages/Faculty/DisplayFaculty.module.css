@@ -47,23 +47,3 @@
 
 
 
-@media (max-width: 1024px) {
-  .facultyCard {
-    flex: 1 1 calc(33% - 24px); 
-    max-width: calc(33% - 24px);
-  }
-}
-
-@media (max-width: 768px) {
-  .facultyCard {
-    flex: 1 1 calc(50% - 24px); 
-    max-width: calc(50% - 24px);
-  }
-}
-
-@media (max-width: 480px) {
-  .facultyCard {
-    flex: 1 1 100%; 
-    max-width: 100%;
-  }
-}
