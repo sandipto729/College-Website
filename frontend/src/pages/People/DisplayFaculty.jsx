@@ -6,7 +6,6 @@ import { NavLink } from 'react-router-dom';
 import SummaryApi from '../../common/index';
 import FacultyCard from '../../component/CardModel/CardModel';
 
-
 const DisplayFaculty = () => {
   const [facultyData, setFacultyData] = useState({ present: [], retired: [] });
   const [showPresent, setShowPresent] = useState(true);
@@ -19,7 +18,7 @@ const DisplayFaculty = () => {
           method: SummaryApi.GetCseProf.method,
         });
         const data = await response.json();
-        console.log(data);
+
         setFacultyData({
           present: data.cseProfData || [],
           retired: data.retiredFaculty || [],
@@ -81,5 +80,4 @@ const DisplayFaculty = () => {
 };
 
 export default DisplayFaculty;
-
 
