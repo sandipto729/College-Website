@@ -15,8 +15,9 @@ import AdministrativeResponsibilities from '../pages/TecherProfile/TeacherData/A
 import ConactProf from './../pages/TecherProfile/TeacherData/Contact/Contact';
 import MiscellaneousProf from './../pages/TecherProfile/TeacherData/Miscellaneous/Miscellaneous'
 import CseProject from './../pages/TecherProfile/TeacherData/Project/Project';
-import DisplayFaculty from '../pages/Faculty/DisplayFaculty';
-import HodCse from '../pages/Faculty/HodCse';
+import DisplayFaculty from '../pages/People/DisplayFaculty';
+import HodCse from '../pages/People/HodCse';
+import DisplayStaff from '../pages/People/DisplayStaff';
 
 const routers = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const routers = createBrowserRouter([
   {
     path: '/professor/hod',
     element: <HodCse />,
+  },
+  {
+    path: '/staff',
+    element: <DisplayStaff />,
   },
   {
     path: '/professor/:id',
