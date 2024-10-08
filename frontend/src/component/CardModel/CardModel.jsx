@@ -22,26 +22,29 @@ const CardModel = ({ faculty }) => {
                             </div>
                         </div>
                     </div>
-                    <h3 className={styles.facultyName}>{name}</h3>
-                    <p className={styles.facultyPosition}>{professorType}</p>
+                    {name.length>0 &&<h3 className={styles.facultyName}>{name}</h3>}
+                    {professorType.length>0 && <p className={styles.facultyPosition}>{professorType}</p>}
                 </div>
                 {/* Research Interest and Contact Info */}
                 <div className="text-center flex-grow">
-                    <p className={`${styles.facultyResearch}`}>
+                    {researchInterest.length > 0 && <p className={`${styles.facultyResearch}`}>
                         <strong>Research Interest:</strong> {researchInterest}
-                    </p>
-                    <p className={styles.facultyEmail}>
+                    </p>}
+
+                    {email.length>0 && <p className={styles.facultyEmail}>
                         <EmailIcon />: <a href={`mailto:${email}`} className="text-blue-500 underline">{email}</a>
-                    </p>
-                    <p className={styles.facultyPhone}>
+                    </p>}
+
+                    {<p className={styles.facultyPhone}>
                         <PhoneIcon />: <a href={`tel:${phone}`} className="text-blue-500 underline">{phone}</a>
-                    </p>
-                    <p className={styles.facultyJoined}>Joined: {collegeJoinYear}</p>
+                    </p>}
+
+                    {collegeJoinYear.length>0 && <p className={styles.facultyJoined}>Joined: {collegeJoinYear}</p>}
                 </div>
                 {/* View Details Button */}
-                <NavLink to={`/professor/${id}`} className={styles.detailsButton}>
+             {  id && <NavLink to={`/professor/${id}`} className={styles.detailsButton}>
                     View Details
-                </NavLink>
+                </NavLink>}
             </div>
         </>
     );
