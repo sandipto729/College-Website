@@ -9,6 +9,10 @@ const SummaryApi={
         url:`${backendUrl}/api/CseNews`,
         method:"GET"
     },
+    GetCseStaff:{
+        url:`${backendUrl}/api/CseStaff`,
+        method:"GET"
+    },
     GetCseProfProfile:{
         url:`${backendUrl}/api/CseProfProfile`,
         method:"POST"

@@ -63,15 +63,14 @@
     font-size: 0.875rem;
     color: #333;
     margin: 8px 0;
+  }
+  .line-clamp {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  /* .line-clamp {
-    
-  } */
   
   .facultyEmail,
   .facultyPhone,
