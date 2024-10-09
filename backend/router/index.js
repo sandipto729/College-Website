@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 //Cse Department
-const CseProf = require('./../controller/CSE/CseProf');
-const CseNews = require('./../controller/CSE/CseNews');
-const CseProfProfile = require('./../controller/CSE/CseProfProfile');
-const CseProject = require('./../controller/CSE/CseProject');
-const CseStaff = require('./../controller/CSE/CseStaff');
-const DevLogin=require('./../controller/CSE/DevLogin')
+const CseProf = require('../controller/CSE/people/CseProf');
+const CseNews = require('./../controller/CSE/news/CseNews');
+const CseProfProfile = require('./../controller/CSE/people/CseProfProfile');
+const CseProject = require('./../controller/CSE/project/CseProject');
+const CseStaff = require('./../controller/CSE/people/CseStaff');
+const DevLogin=require('../controller/CSE/developer/DevLogin')
 
 
 
