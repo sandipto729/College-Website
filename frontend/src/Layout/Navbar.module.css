@@ -1,0 +1,46 @@
+.navGrid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .GridEle{
+    width: 10rem;
+    font: 900;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.GridEle {
+    width: 10rem;
+    padding: 12px; 
+    font-weight: 600; 
+    font-size: 1.125rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+    font-family: 'Afacad-Flux', sans-serif; 
+  }
+  
+  .GridEle:hover {
+    opacity: 1; 
+    transform: translateY(-4px) scale(1.1); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .GridEle2{
+    font-weight: 600; 
+    font-size: 1.125rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+    font-family: 'Afacad-Flux', sans-serif; 
+  }
+  .GridEle2:hover{
+    opacity: 1; 
+    transform: translateY(-4px) scale(1.1); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); 
+  }
