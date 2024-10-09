@@ -2,6 +2,7 @@ import React from 'react'
 import { useForm } from "react-hook-form"
 import SummaryApi from '../common'
 import styles from './DeveloperLogin.module.scss'
+import { toast } from 'react-toastify'
 
 const DeveloperLogin = () => {
     const {
@@ -25,8 +26,10 @@ const DeveloperLogin = () => {
             throw new Error('Network response was not ok');
         }
 
+        // const responseData = await response.json();
+       
         const responseData = await response.json();
-        console.log(responseData);
+        toast.success(responseData.message)
     }
     return (
         <div className={styles.DevLoginContainer}>
