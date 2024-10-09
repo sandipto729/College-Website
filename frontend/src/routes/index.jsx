@@ -18,6 +18,7 @@ import CseProject from './../pages/TecherProfile/TeacherData/Project/Project';
 import DisplayFaculty from '../pages/People/DisplayFaculty';
 import HodCse from '../pages/People/HodCse';
 import DisplayStaff from '../pages/People/DisplayStaff';
+import GalleryLogic from '../pages/ImageGallery/GalleryLogic';
 
 const routers = createBrowserRouter([
   {
@@ -92,8 +93,13 @@ const routers = createBrowserRouter([
         path:'projects/:id',
         element:<CseProject/>
       }
+      
     ]
-  }
+  },
+{
+  path:'/photoGallery',
+  element:<GalleryLogic/>
+}
 ]);
 
 export default routers;

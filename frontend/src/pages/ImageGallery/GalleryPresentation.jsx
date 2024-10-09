@@ -58,7 +58,7 @@ const  images=ImageDetails
     return (
 
 <div className="flex flex-col h-screen  bg-gradient-to-r from-cyan-300 to-white-200">
-  <Navbar/>
+  
 <div  className={styles.Container}>
 <Swiper
  spaceBetween={30}
