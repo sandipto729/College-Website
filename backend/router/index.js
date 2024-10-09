@@ -6,6 +6,7 @@ const CseNews = require('./../controller/CSE/CseNews');
 const CseProfProfile = require('./../controller/CSE/CseProfProfile');
 const CseProject = require('./../controller/CSE/CseProject');
 const CseStaff = require('./../controller/CSE/CseStaff');
+const DevLogin=require('./../controller/CSE/DevLogin')
 
 
 
@@ -15,5 +16,6 @@ router.get('/CseNews', CseNews);
 router.post('/CseProfProfile', CseProfProfile);
 router.post('/CseProjectDetails', CseProject);
 router.get('/CseStaff', CseStaff); 
+router.post('/DevLogin',DevLogin);
 
 module.exports = router;
