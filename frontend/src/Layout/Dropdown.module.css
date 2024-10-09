@@ -10,15 +10,14 @@
     border-radius:10px ;
     background-color:rgb(28, 255, 179);
     width: 100%;
-    z-index: 1000;
+    z-index: 1;
     padding: 0.5rem;
     
     }
     .DropWrapperOpen:hover{
         transform:translate(10px); 
-        /* transform: scale(1.05); Slight enlargement */
-    
-        }
+        z-index: 1;
+    }
     
     .dropItem{
         width: 99%;

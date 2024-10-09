@@ -4,7 +4,7 @@ function GalleryLogic() {
 
 
     return (
-        <div>
+        <div className="mt-10">
             <GalleryPresentation />
         </div>
     )
