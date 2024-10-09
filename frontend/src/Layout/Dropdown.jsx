@@ -7,7 +7,7 @@ function Dropdown({data,OpenDropDown}){
 {
 data.map((item,index)=>{
     return (
-<span onMouseMove={() => OpenDropDown()} key={index} className='afacad-flux-font1 ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-100 w-full rounded-lg mb-2 mt-2 pl-1' ><Link to={item.link}>{item.itemName}</Link></span>
+<span onMouseMove={() => OpenDropDown()} key={index} className='afacad-flux-font1 ease-in-out delay-150 hover:-translate-y-1  hover:bg-blue-100 w-full rounded-lg  mt-1 pl-1' ><Link to={item.link}>{item.itemName}</Link></span>
     )
 })
 }
