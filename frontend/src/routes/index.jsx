@@ -18,6 +18,7 @@ import CseProject from './../pages/TecherProfile/TeacherData/Project/Project';
 import DisplayFaculty from '../pages/People/DisplayFaculty';
 import HodCse from '../pages/People/HodCse';
 import DisplayStaff from '../pages/People/DisplayStaff';
+import DeveloperLogin from '../Authentication/DeveloperLogin';
 
 const routers = createBrowserRouter([
   {
@@ -93,7 +94,11 @@ const routers = createBrowserRouter([
         element:<CseProject/>
       }
     ]
-  }
+  },
+  {
+    path: '/developer',
+    element: <DeveloperLogin />,
+  },
 ]);
 
 export default routers;

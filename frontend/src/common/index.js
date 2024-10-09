@@ -20,6 +20,10 @@ const SummaryApi={
     GetCseProjectDetails:{
         url:`${backendUrl}/api/CseProjectDetails`,
         method:"POST"
+    },
+    DeveloperLogin:{
+        url:`${backendUrl}/api/DevLogin`,
+        method:"POST"
     }
 }
 
