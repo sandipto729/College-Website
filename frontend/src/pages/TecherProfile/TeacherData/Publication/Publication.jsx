@@ -31,7 +31,7 @@ const Publications = () => {
 
   return (
     <div>
-      <h3>Publications</h3>
+      <h3 className='text-center font-bold text-1.2xl p-2'>Publications</h3>
       <table className={styles.Table}>
         <thead>
           <tr>
@@ -48,7 +48,7 @@ const Publications = () => {
               <td>{publication?.journal}</td>
               <td>{publication?.year}</td>
               <td>
-                <a href={publication?.link} target="_blank" rel="noopener noreferrer">
+                <a href={publication?.link} target="_blank" rel="noopener noreferrer" className='text-blue-500 underline'>
                   View
                 </a>
               </td>

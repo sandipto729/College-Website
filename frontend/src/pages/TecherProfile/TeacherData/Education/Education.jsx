@@ -32,7 +32,7 @@ const Education = () => {
 
   return (
     <div>
-      <h3>Education</h3>
+      <h3 className='text-center font-bold text-1.2xl p-2'>Education</h3>
       <table className={styles.Table}>
         <thead>
           <tr>

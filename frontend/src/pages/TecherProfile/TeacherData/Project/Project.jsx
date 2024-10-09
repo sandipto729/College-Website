@@ -66,17 +66,17 @@ const ProjectDetails = () => {
 
   return (
     <div>
-      <h3>Project Details</h3>
+      <h3 className='text-center font-bold text-1.2xl p-2'>Project Details</h3>
 
       {/* Sponsored Projects Section */}
       <div>
-        <h4>Sponsered Projects</h4>
+        <h4 className='p-2'>Sponsered Projects</h4>
         {sponsoredProjects.length > 0 ? renderTable(sponsoredProjects) : <p>No sponsored projects available.</p>}
       </div>
 
       {/* Consultancy Projects Section */}
       <div>
-        <h4>Consultancy Projects</h4>
+        <h4 className='p-2'>Consultancy Projects</h4>
         {consultancyProjects.length > 0 ? renderTable(consultancyProjects) : <p>No consultancy projects available.</p>}
       </div>
     </div>

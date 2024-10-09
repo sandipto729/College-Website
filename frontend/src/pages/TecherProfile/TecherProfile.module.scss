@@ -1,21 +1,24 @@
-/* Container for the entire profile page */
 .container {
+    margin: 1rem;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    flex-wrap: wrap;
+    width: 98vw;
     min-height: 100vh;
-    background-color: #fff5e6; /* Light orange background for a warm tone */
+    background-color: #fff5e6; 
+    // overflow-x: hidden;
   }
   
 /* Left bar containing profile details */
 .leftBar {
-    width: 25%;
-    background-color: #8cb6f9; /* Bright orange */
+    width: 20%;
+    background: rgb(9,74,121);
+    background: radial-gradient(circle, rgba(9,74,121,1) 35%, rgba(4,19,49,0.8982186624649859) 100%);
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 2px solid #525150; /* Deep orange */
+    border-right: 2px solid #bdbdbd; /* Deep orange */
     border-radius: 1rem;
   }
   
@@ -24,16 +27,18 @@
     height: 150px;
     border-radius: 50%;
     margin-bottom: 20px;
-    border: 2px solid #333232; /* Bold border around the image */
+    border: 2px solid ;
+    border-color: #fff5e6;
   }
   
 .leftBar p {
     margin: 10px 0;
     font-size: 18px;
     text-align: center;
-    color: #000000; /* Dark brown for a bold contrast */
+    color: #ffffff; /* Dark brown for a bold contrast */
   }
   
+
 /* Social media section */
 .socialMedia {
     margin-top: 20px;
@@ -44,19 +49,22 @@
   
 .socialMedia a {
     font-size: 22px;
-    color: #000000; /* Muted brown */
+    color: #ffffff; /* Muted brown */
     transition: color 0.3s ease;
   }
   
 .socialMedia a:hover {
-    color: #074a7d; /* Bright orange when hovered */
+    color: #b4b4b4; /* Bright orange when hovered */
   }
   
 /* Middle bar for publication and education details */
 .middleBar {
-    width: 60%;
+    width: 62.5%;
     padding: 20px;
-    background-color: #b2fffb; /* Soft peach background */
+    background: hsla(217, 100%, 50%, 1);
+    border-radius: 1rem;
+
+    background: linear-gradient(180deg, hsla(217, 100%, 50%, 1) 0%, hsla(206, 100%, 59%, 1) 50%, hsla(186, 100%, 69%, 1) 100%);
   }
   
 .pubEdu {
@@ -64,12 +72,13 @@
     justify-content: space-between;
     margin-bottom: 30px;
     text-align: center;
+    
   }
   
 .pub, .edu {
     width: 48%;
     padding: 6px;
-    background-color: #93dafa; 
+    background-color: #ffffff; 
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -83,11 +92,11 @@
     font-weight: bold;
     margin-bottom: 10px;
     font-size: 16px;
-    color: #bf360c; /* Dark red-orange for titles */
+    color: #000000; /* Dark red-orange for titles */
   }
   
 .box {
-    border: 1px solid #ffab91;
+    border: 1px solid #000000;
     height: 5rem;
     width: 10rem;
     margin-bottom: 15px;
@@ -96,7 +105,7 @@
     align-items: center;
     justify-content: space-around;
     border-radius: 8px;
-    background-color: #ffccbc; /* Light coral */
+   background-color: rgb(206, 205, 205);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -104,34 +113,44 @@
   
 .box:hover {
     transform: scale(1.05);
-    background-color: #ffab91; /* Brighter coral on hover */
+    overflow:visible;
+    background-color: #bbbbbb; /* Brighter coral on hover */
   }
   
 .box p {
     margin: 0;
     font-size: 14px;
-    color: #5d4037; /* Warm brown */
+    color: #000000; /* Warm brown */
+    // text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
   }
   
 /* Right bar for navigation */
 .rightBar {
-    width: 25%;
-    background-color: #ffecb3; /* Soft yellow */
-    padding: 20px;
+    // width: 15%;
+    width: calc(99.3% - 20% - 62.5%);
+    background: hsla(20, 85%, 60%, 1);
+
+    background: linear-gradient(225deg, hsla(20, 85%, 60%, 1) 0%, hsla(27, 86%, 61%, 1) 8%, hsla(39, 89%, 62%, 1) 99%, hsla(58, 100%, 68%, 1) 100%, hsla(56, 99%, 67%, 1) 100%);
+
+    padding: 15px;
     border-left: 2px solid #ffcc80;
+    border-radius: 1rem;
   }
   
 .rightBarList {
+    width: 100%;
     list-style-type: none;
     padding: 0;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 
   }
   
 .rightBar li {
+  width: 100%;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
@@ -151,9 +170,11 @@
 .rightBar li a:hover {
     background-color: #ff7043; /* Bright orange */
     color: #fff;
+    border-radius: 1rem;
   }
   .rightBarList li.active {
     background-color: #d4d2d2; /* Highlight the active menu item */
+    border-radius: 1rem;
   }
   
   .menu{
@@ -188,3 +209,6 @@
     }
 }
 
+.container{
+  overflow-x: hidden;
+}
