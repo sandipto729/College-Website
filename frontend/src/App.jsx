@@ -10,23 +10,21 @@ import NewsBar from './component/NewsBar/NewsBar';
 import ContactUs from './pages/ContactUs/CSE/ConatctCse'
 import Navbar from './Layout/Navbar'
 
-import Header from 'react-headroom';
-
+import Headroom from 'react-headroom'
 
 function App() {
   return (
-    <>
-
+    <div>
       {/* <NewsBar />
       <ContactUs /> */}
       <ToastContainer />
-      <Header>
-        <Navbar />
-      </Header>
+    <Headroom>
+    <Navbar/>
+    </Headroom>
 
 
       <Outlet />
-    </>
+    </div>
   );
 }
 

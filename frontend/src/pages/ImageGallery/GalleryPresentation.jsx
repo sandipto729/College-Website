@@ -24,7 +24,7 @@ import img11 from '../../assets/dgp11.jpeg'
 import img12 from '../../assets/dgp12.jpeg'
 import Navbar from '../../Layout/Navbar';
 
-
+import Headroom from 'react-headroom'
 
 
 function GalleryPresentation(){
@@ -58,7 +58,6 @@ const  images=ImageDetails
     return (
 
 <div className="flex flex-col h-screen  bg-gradient-to-r from-cyan-300 to-white-200">
-  
 <div  className={styles.Container}>
 <Swiper
  spaceBetween={30}
