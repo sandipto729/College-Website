@@ -1,5 +1,4 @@
-const CseProfModel = require('./../../models/CSE/CseProf');
-
+const CseProfModel = require("./../../../models/CSE/CseProf");
 const getCseProf = async (req, res) => {
     try {
         const cseProfData = await CseProfModel.find();  

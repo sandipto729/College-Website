@@ -1,4 +1,4 @@
-const CseNewsModel = require("../../models/CSE/CseNews");
+const CseNewsModel = require("../../../models/CSE/CseNews");
 
 const getCseNews = async (req, res) => {
     try {

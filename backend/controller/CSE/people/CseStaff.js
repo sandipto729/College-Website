@@ -1,8 +1,8 @@
-const cseStaffModel = require('./../../models/CSE/CseStaff');
+const CseStaffModel = require('./../../../models/CSE/CseStaff');
 
 const getCseStaff = async (req, res) => {
     try {
-        const cseStaffData = await cseStaffModel.find();
+        const cseStaffData = await CseStaffModel.find();
         res.json({ cseStaffData });
     } catch (error) {
         console.error("Error fetching CSE Staff:", error);

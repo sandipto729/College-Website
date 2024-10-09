@@ -1,5 +1,5 @@
-const CseProjectModel = require("./../../models/CSE/CseProject");
-const CseProfModel = require("./../../models/CSE/CseProf");
+const CseProjectModel = require("./../../../models/CSE/CseProject");
+const CseProfModel = require("./../../../models/CSE/CseProf");
 
 const CseProjectController = async (req, res) => {
   try {
