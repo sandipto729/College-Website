@@ -19,87 +19,95 @@ import DisplayFaculty from '../pages/People/DisplayFaculty';
 import HodCse from '../pages/People/HodCse';
 import DisplayStaff from '../pages/People/DisplayStaff';
 import GalleryLogic from '../pages/ImageGallery/GalleryLogic';
+import DeveloperLogin from '../Authentication/DeveloperLogin';
 
 const routers = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-  },
-  {
-    path:'/professor',
-    element: <DisplayFaculty />,
-  },
-  {
-    path: '/professor/hod',
-    element: <HodCse />,
-  },
-  {
-    path: '/staff',
-    element: <DisplayStaff />,
-  },
-  {
-    path: '/professor/:id',
-    element: <TecherProfile />,
     children: [
       {
-        index: true,
-        element: <Education />,
+        path: 'professor',
+        element: <DisplayFaculty />,
       },
       {
-        path: 'education/:id',
-        element: <Education />,
+        path: 'professor/hod',
+        element: <HodCse />,
       },
       {
-        path: 'experience/:id',
-        element: <WorkExperience />,
+        path: 'staff',
+        element: <DisplayStaff />,
       },
       {
-        path: 'research-interest/:id',
-        element: <ResearchInterest />,
+        path: 'professor/:id',
+        element: <TecherProfile />,
+        children: [
+          {
+            index: true,
+            element: <Education />,
+          },
+          {
+            path: 'education/:id',
+            element: <Education />,
+          },
+          {
+            path: 'experience/:id',
+            element: <WorkExperience />,
+          },
+          {
+            path: 'research-interest/:id',
+            element: <ResearchInterest />,
+          },
+          {
+            path: 'publications/:id',
+            element: <Publications />
+          },
+          {
+            path: 'teaching-topics/:id',
+            element: <TeachingTopics />
+          },
+          {
+            path: 'doctoralstudents/:id',
+            element: <DoctoralStudents />
+          },
+          {
+            path: 'ugpgstudents/:id',
+            element: <UGPGStudents />
+          },
+          {
+            path: 'awards/:id',
+            element: <AwardsAndRecognition />
+          },
+          {
+            path: 'administation/:id',
+            element: <AdministrativeResponsibilities />
+          },
+          {
+            path: 'contact/:id',
+            element: <ConactProf />
+          },
+          {
+            path: 'miscellaneous/:id',
+            element: <MiscellaneousProf />
+          },
+          {
+            path: 'projects/:id',
+            element: <CseProject />
+          }
+
+        ]
       },
       {
-        path:'publications/:id',
-        element:<Publications/>
+        path: 'photoGallery',
+        element: <GalleryLogic />
       },
       {
-        path:'teaching-topics/:id',
-        element:<TeachingTopics/>
-      },
-      {
-        path:'doctoralstudents/:id',
-        element:<DoctoralStudents/>
-      },
-      {
-        path:'ugpgstudents/:id',
-        element:<UGPGStudents/>
-      },
-      {
-        path:'awards/:id',
-        element:<AwardsAndRecognition/>
-      },
-      {
-        path:'administation/:id',
-        element:<AdministrativeResponsibilities/>
-      },
-      {
-        path:'contact/:id',
-        element:<ConactProf/>
-      },
-      {
-        path:'miscellaneous/:id',
-        element:<MiscellaneousProf/>
-      },
-      {
-        path:'projects/:id',
-        element:<CseProject/>
+        path: 'developer',
+        element: <DeveloperLogin />,
       }
-      
     ]
-  },
-{
-  path:'/photoGallery',
-  element:<GalleryLogic/>
-}
+  }
+
 ]);
 
 export default routers;

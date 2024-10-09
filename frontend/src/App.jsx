@@ -19,7 +19,7 @@ function App() {
     <ContactUs/>
     <ToastContainer />
       <Outlet />
-   </>
+    </>
   );
 }
 
