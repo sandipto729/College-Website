@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import styles from  './GalleryPresentation.module.css';
+import styles from './GalleryPresentation.module.css';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -27,35 +27,35 @@ import Navbar from '../../Layout/Navbar';
 import Headroom from 'react-headroom'
 
 
-function GalleryPresentation(){
+function GalleryPresentation() {
 
-  const [popUp,setPopUp]=useState(false)
-  const [popUpImage,setPopUpImage]=useState({})
-  const imageDetails=[img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12]
-  
-function OpenPopUp(){
-  setPopUp(true)
-}
+  const [popUp, setPopUp] = useState(false)
+  const [popUpImage, setPopUpImage] = useState({})
+  const imageDetails = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12]
 
-function ClosePopUp(){
-setPopUp(false)
-}
-function showImage(image){
+  function OpenPopUp() {
+    setPopUp(true)
+  }
 
-  setPopUpImage(image)
-  setPopUp(true)
+  function ClosePopUp() {
+    setPopUp(false)
+  }
+  function showImage(image) {
 
-}
+    setPopUpImage(image)
+    setPopUp(true)
 
-const ImageDetails=imageDetails;
-const  images=ImageDetails
+  }
+
+  const ImageDetails = imageDetails;
+  const images = ImageDetails
 
 
-    var randomImages = (images)
+  var randomImages = (images)
 
-    if(randomImages.length>10)randomImages=randomImages.slice(0,10);
+  if (randomImages.length > 10) randomImages = randomImages.slice(0, 10);
 
-    return (
+  return (
 
 <div className="flex flex-col h-screen  bg-gradient-to-r from-cyan-300 to-white-200">
 <div  className={styles.Container}>
@@ -84,34 +84,34 @@ const  images=ImageDetails
         <img  src={images} 
         />
 
-        </SwiperSlide>
-    )
-        })                
-       }
-</Swiper> 
-{/* Create Grid Page */ }
-<div className={styles.Gallery}>
-{images.map((items,index)=>{
-return (
-<div key={index} >
-<img
-className={styles.images}
-src={items}
-onClick={()=>showImage(items)}
-/>
-</div>  
-)
-})
+              </SwiperSlide>
+            )
+          })
+          }
+        </Swiper>
+        {/* Create Grid Page */}
+        <div className={styles.Gallery}>
+          {images.map((items, index) => {
+            return (
+              <div key={index} >
+                <img
+                  className={styles.images}
+                  src={items}
+                  onClick={() => showImage(items)}
+                />
+              </div>
+            )
+          })
+          }
+          {popUp && <PopUp image={popUpImage} OpenPopUp={OpenPopUp} ClosePopUp={ClosePopUp} />}
+
+        </div>
+
+
+      </div>
+    </div>
+
+  )
 }
-{popUp && <PopUp image={popUpImage} OpenPopUp={OpenPopUp} ClosePopUp={ClosePopUp}/>}
-
-</div>
-
-
-</div>
-</div>
-
-    )
-  }
 
 export default GalleryPresentation

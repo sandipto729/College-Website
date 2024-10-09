@@ -1,13 +1,13 @@
 import GalleryPresentation from "./GalleryPresentation";
 
-function GalleryLogic(){
+function GalleryLogic() {
 
-    
-return (
-    <div>
-<GalleryPresentation  />
-    </div>
-)
+
+    return (
+        <div className="mt-10">
+            <GalleryPresentation />
+        </div>
+    )
 }
 
 export default GalleryLogic;

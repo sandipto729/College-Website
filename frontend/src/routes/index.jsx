@@ -20,6 +20,7 @@ import HodCse from '../pages/People/HodCse';
 import DisplayStaff from '../pages/People/DisplayStaff';
 import GalleryLogic from '../pages/ImageGallery/GalleryLogic';
 import DeveloperLogin from '../Authentication/DeveloperLogin';
+import ContactUs from './../pages/ContactUs/CSE/ConatctCse'
 
 const routers = createBrowserRouter([
   {
@@ -104,6 +105,10 @@ const routers = createBrowserRouter([
       {
         path: 'developer',
         element: <DeveloperLogin />,
+      },
+      {
+        path: 'contactUs',
+        element: <ContactUs />,
       }
     ]
   }
