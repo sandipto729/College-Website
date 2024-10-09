@@ -5,20 +5,25 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top:50px;
+    top:38px;
     left:0px;
     border-radius:10px ;
-    background-color:aquamarine;
+    background-color:rgb(28, 255, 179);
     width: 100%;
-    transition:  0.5s ease; /* Transition for both opacity and transform */
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    z-index: 999;
+    z-index: 1000;
+    padding: 0.5rem;
     
     }
     .DropWrapperOpen:hover{
-        transform:translate(10px); /* Start in the correct position */
-        transform: scale(1.05); /* Slight enlargement */
+        transform:translate(10px); 
+        /* transform: scale(1.05); Slight enlargement */
     
         }
     
-    
+    .dropItem{
+        width: 99%;
+    }
+    .dropItem:hover{
+        background-color: #edf2f9;
+        border-radius: 0.5rem;
+    }
