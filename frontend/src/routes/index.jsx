@@ -27,7 +27,7 @@ const routers = createBrowserRouter([
     element: <App />,
   },
   {
-    path:'/professor',
+    path: '/professor',
     element: <DisplayFaculty />,
   },
   {
@@ -59,53 +59,52 @@ const routers = createBrowserRouter([
         element: <ResearchInterest />,
       },
       {
-        path:'publications/:id',
-        element:<Publications/>
+        path: 'publications/:id',
+        element: <Publications />
       },
       {
-        path:'teaching-topics/:id',
-        element:<TeachingTopics/>
+        path: 'teaching-topics/:id',
+        element: <TeachingTopics />
       },
       {
-        path:'doctoralstudents/:id',
-        element:<DoctoralStudents/>
+        path: 'doctoralstudents/:id',
+        element: <DoctoralStudents />
       },
       {
-        path:'ugpgstudents/:id',
-        element:<UGPGStudents/>
+        path: 'ugpgstudents/:id',
+        element: <UGPGStudents />
       },
       {
-        path:'awards/:id',
-        element:<AwardsAndRecognition/>
+        path: 'awards/:id',
+        element: <AwardsAndRecognition />
       },
       {
-        path:'administation/:id',
-        element:<AdministrativeResponsibilities/>
+        path: 'administation/:id',
+        element: <AdministrativeResponsibilities />
       },
       {
-        path:'contact/:id',
-        element:<ConactProf/>
+        path: 'contact/:id',
+        element: <ConactProf />
       },
       {
-        path:'miscellaneous/:id',
-        element:<MiscellaneousProf/>
+        path: 'miscellaneous/:id',
+        element: <MiscellaneousProf />
       },
       {
-        path:'projects/:id',
-        element:<CseProject/>
+        path: 'projects/:id',
+        element: <CseProject />
       }
-      
+
     ]
   },
-{
-  path:'/photoGallery',
-  element:<GalleryLogic/>
-}
+  {
+    path: '/photoGallery',
+    element: <GalleryLogic />
   },
   {
     path: '/developer',
     element: <DeveloperLogin />,
-  },
+  }
 ]);
 
 export default routers;
