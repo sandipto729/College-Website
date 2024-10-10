@@ -8,7 +8,7 @@ import {toast} from "react-toastify";
 import SummaryApi from '../../../common';
 
 function ProfessorForm() {
-    const { register, handleSubmit, control } = useForm({
+    const { register, handleSubmit, control,formState: { errors }  } = useForm({
         defaultValues: {
             ownEducation: [{ degree: "", institution: "", year: "" }],
             workExperience: [{ position: '', institution: '', duration: '' }],
@@ -113,9 +113,10 @@ function ProfessorForm() {
                 <input
                     id="name"
                     type="text"
-                    {...register("name")}
+                    {...register("name",{required:true})}
                     placeholder="Dr. John Doe"
                 />
+                {errors.name && <span className='text-red-500'>{'*This field is requiresd'}</span>}
             </div>
 
             {/* Photo */}
@@ -132,12 +133,13 @@ function ProfessorForm() {
             {/* Professor Type */}
             <div className={styles.formGroup}>
                 <label htmlFor="professorType">Professor Type</label>
-                <select id="professorType" {...register("professorType")}>
+                <select id="professorType" {...register("professorType",{required:true})}>
                     <option value="">Select Type</option>
                     <option value="Full Professor">Full Professor</option>
                     <option value="Associate Professor">Associate Professor</option>
                     <option value="Assistant Professor">Assistant Professor</option>
                 </select>
+                {errors.professorType && <span className='text-red-500'>{'*This field is requiresd'}</span>}
             </div>
 
             {/* College Join Year */}
@@ -146,9 +148,10 @@ function ProfessorForm() {
                 <input
                     id="collegeJoinYear"
                     type="number"
-                    {...register("collegeJoinYear")}
+                    {...register("collegeJoinYear",{required:true})}
                     placeholder="2010"
                 />
+                {errors.collegeJoinYear && <span className='text-red-500'>{'*This field is requiresd'}</span>}
             </div>
 
             {/* Social Media */}
