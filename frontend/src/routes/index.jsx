@@ -21,6 +21,7 @@ import DisplayStaff from '../pages/People/DisplayStaff';
 import GalleryLogic from '../pages/ImageGallery/GalleryLogic';
 import DeveloperLogin from '../Authentication/DeveloperLogin';
 import ContactUs from './../pages/ContactUs/CSE/ConatctCse'
+import CseProfAdd from './../pages/Developer/people/CseProfAdd';
 
 const routers = createBrowserRouter([
   {
@@ -109,6 +110,16 @@ const routers = createBrowserRouter([
       {
         path: 'contactUs',
         element: <ContactUs />,
+      }
+      ,{
+        path:'profile',
+        
+        children:[
+          {
+            path:'cseProfAdd',
+            element:<CseProfAdd/> 
+          }
+        ]
       }
     ]
   }
