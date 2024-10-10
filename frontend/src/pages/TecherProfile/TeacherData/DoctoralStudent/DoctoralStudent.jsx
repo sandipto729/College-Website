@@ -36,6 +36,7 @@ const DoctoralStudents = () => {
           <div className={styles.card} key={index}>
             <img src={student.photo} alt="Student" className={styles.studentPhoto} />
             <div className={styles.cardContent}>
+              <h3>{student.name}</h3>
               <h4>{student.type}</h4>
               <p>{student.subject}</p>
             </div>

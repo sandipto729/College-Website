@@ -1,45 +1,46 @@
 const mongoose = require('mongoose');
 
 const educationSchema = new mongoose.Schema({
-  degree: { type: String, required: true },
-  institution: { type: String, required: true },
-  year: { type: Number, required: true }
+  degree: { type: String},
+  institution: { type: String},
+  year: { type: Number}
 });
 
 const workExperienceSchema = new mongoose.Schema({
-  position: { type: String, required: true },
-  institution: { type: String, required: true },
-  duration: { type: String, required: true }
+  position: { type: String},
+  institution: { type: String},
+  duration: { type: String}
 });
 
 const publicationSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  journal: { type: String, required: true },
-  year: { type: Number, required: true },
+  title: { type: String},
+  journal: { type: String},
+  year: { type: Number},
   link: { type: String }
 });
 
 const studentSchema = new mongoose.Schema({
-  photo: { type: String, required: true },
-  type: { type: String, required: true },
-  subject: { type: String, required: true }
+  name: { type: String},
+  photo: { type: String},
+  type: { type: String},
+  subject: { type: String }
 });
 
 const awardSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  year: { type: Number, required: true },
-  organization: { type: String, required: true }
+  title: { type: String },
+  year: { type: Number },
+  organization: { type: String}
 });
 
 const responsibilitySchema = new mongoose.Schema({
-  position: { type: String, required: true },
-  duration: { type: String, required: true }
+  position: { type: String},
+  duration: { type: String }
 });
 
 const contactSchema = new mongoose.Schema({
-  email: { type: String, required: true },
-  phone: { type: String, required: true },
-  office: { type: String, required: true }
+  email: { type: String },
+  phone: { type: String },
+  office: { type: String}
 });
 
 const cseProfSchema = new mongoose.Schema({
@@ -56,7 +57,7 @@ const cseProfSchema = new mongoose.Schema({
     researchGate: { type: String }
   },
   publicationDetails: {
-    totalPublications: { type: Number, required: true },
+    totalPublications: { type: Number},
     sponsoredProjects: { type: Number },
     consultancyProjects: { type: Number }
   },

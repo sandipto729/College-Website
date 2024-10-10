@@ -25,6 +25,11 @@ const SummaryApi={
         url:`${backendUrl}/api/DevLogin`,
         method:"POST"
     }
+    ,
+    CseProfAdd:{
+        url:`${backendUrl}/api/CseProfAdd`,
+        method:"POST"
+    }
 }
 
 export default SummaryApi;

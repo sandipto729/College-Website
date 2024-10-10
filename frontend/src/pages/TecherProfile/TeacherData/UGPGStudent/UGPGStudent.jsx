@@ -38,6 +38,7 @@ const PGUGStudents = () => {
           <div className={styles.card} key={index}>
             <img src={student.photo} alt="PG Student" className={styles.studentPhoto} />
             <div className={styles.cardContent}>
+              <h4>{student.name}</h4>
               <h4>{student.type}</h4>
               <p>{student.subject}</p>
             </div>
@@ -51,6 +52,7 @@ const PGUGStudents = () => {
           <div className={styles.card} key={index}>
             <img src={student.photo} alt="UG Student" className={styles.studentPhoto} />
             <div className={styles.cardContent}>
+              <h4>{student.name}</h4>
               <h4>{student.type}</h4>
               <p>{student.subject}</p>
             </div>
