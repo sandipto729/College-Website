@@ -8,15 +8,18 @@
     top:38px;
     left:0px;
     border-radius:10px ;
-    background-color:rgb(28, 255, 179);
+    background-color:#06f6e7;
     width: 100%;
     z-index: 1;
     padding: 0.5rem;
+    position: relative;
+    bottom:10px;
+    top:10px;
     
     }
     .DropWrapperOpen:hover{
-        transform:translate(10px); 
-        z-index: 1;
+        transform: scale(1.1);
+                z-index: 1;
     }
     
     .dropItem{

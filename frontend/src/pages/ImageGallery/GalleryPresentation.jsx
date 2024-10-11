@@ -56,8 +56,6 @@ function GalleryPresentation() {
   if (randomImages.length > 10) randomImages = randomImages.slice(0, 10);
 
   return (
-
-<div className="flex flex-col h-screen  bg-gradient-to-r from-cyan-300 to-white-200">
 <div  className={styles.Container}>
 <Swiper
  spaceBetween={30}
@@ -108,8 +106,7 @@ function GalleryPresentation() {
         </div>
 
 
-      </div>
-    </div>
+</div>
 
   )
 }
