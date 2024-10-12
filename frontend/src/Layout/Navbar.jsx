@@ -35,23 +35,22 @@ function Navbar() {
           <button className={styles.GridEle1}>PROJECTS</button>
           <button className={styles.GridEle1}>FACILITIES</button>
           <button onClick={() => setDropdown3(!Dropdown3)} style={{display:'flex' , flexDirection:'column',justifyContent:'space-between'}} onMouseLeave={() => setDropdown3(false)}  className={styles.GridEle1}><span className='flex flex-row w-full  justify-between mt-1 ml-1'><p>ACTIVITIES</p> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" /></svg></span>{Dropdown3 && <Dropdown data={[{ itemName: "Upcoming Events", link: "" }, { itemName: "Past Events", link: "" }]} OpenDropDown={OpenDropDown3} />}</button>
+          <Link to={'/photoGallery'} className={styles.GridEle1}>PHOTO GALLERY</Link>
+          <Link to={'/contactus'} className={styles.GridEle1}>CONTACT US</Link>
+          <button className={styles.GridEle1}>PLACEMENT & INTERNSHIP</button>
+          <button className={styles.GridEle1}>ALUMNI SPEAK</button>
+   
+
+
           </div>
 
-        <div className={styles.navGrid2}>
-          <Link to={'/photoGallery'} className={styles.GridEle2}>PHOTO GALLERY</Link>
-          <Link to={'/contactus'} className={styles.GridEle2}>CONTACT US</Link>
-          <button className={styles.GridEle2}>PLACEMENT & INTERNSHIP</button>
-          <button className={styles.GridEle2}>ALUMNI SPEAK</button>
-        </div>
-
-      <div className='block md:hidden ml-2 mt-2 w-[50%] ' >
-        <svg onClick={() => OpenDashBoard()} xmlns="http://www.w3.org/2000/svg" className='w-[10%] h-[10%] ease-in-out hover:-translate-y-1 hover:scale-110' height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z" /></svg>
-        {
-        dashBoard && <DashBoard  DashBoard={dashBoard}/>
-      }
-      </div>
-
-    </div>
+          <div className={"block md:hidden ml-2 mt-2 w-[50vh] p-4 "} >
+            <svg onClick={() => OpenDashBoard()} xmlns="http://www.w3.org/2000/svg" className='w-[15%] h-[15%] ease-in-out hover:-translate-y-1 hover:scale-110' height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z" /></svg>
+            {
+            dashBoard && <DashBoard  DashBoard={dashBoard}/>
+          }
+          </div>
+          </div>
   )
 }
 

@@ -31,18 +31,6 @@
     transform: scale(1.1);
   }
   
-  .navGrid1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-  .navGrid2{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    width: 100%;
-    }
     
   .container{
     display: flex;
@@ -53,8 +41,12 @@
     width: 50%;
     position: absolute;
     z-index: 2;
+    /* overflow-y: scroll; */
+    overflow-x: hidden;
+    height: 100vh;
 
-
+  }
+  .wrapper{
   }
   
   .container li{

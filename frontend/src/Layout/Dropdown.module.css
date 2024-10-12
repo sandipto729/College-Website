@@ -18,14 +18,16 @@
     
     }
     .DropWrapperOpen:hover{
-        transform: scale(1.1);
                 z-index: 1;
     }
     
     .dropItem{
         width: 99%;
+
     }
     .dropItem:hover{
         background-color: #edf2f9;
         border-radius: 0.5rem;
+        transform: scale(1.03);
+
     }
