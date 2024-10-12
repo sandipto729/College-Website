@@ -7,47 +7,25 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  flex-basis: 15%;
+  margin-bottom: 2px;
+  margin-top: 2px;
 }
 
-.GridEle2{
-  min-width: max-content;
-  width: 17%;
-  border-radius: 10px;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    margin-inline: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 7vh;
-  margin-top:5px
-}
 .GridEle1:hover{
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   background-color: #f8edeb;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-.GridEle2:hover{
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  background-color: #f8edeb;
-  transform: scale(1.1);
-}
 
 .navGrid1{
 display :flex;
 flex-direction: row;
-justify-content: space-between;
+justify-content: space-around;
 margin-bottom: 3px;
-
-}
-.navGrid2{
-  display :flex;
-  flex-direction: row;
-  justify-content: start;
-  width: 100%;
-  margin-bottom: 3px;
+flex-wrap: wrap;
 }
   
 .container{
@@ -63,8 +41,5 @@ margin-bottom: 3px;
 @media only screen and (max-width: 768px) {
   .navGrid1 {
 display:none;
-  }
-  .navGrid2{
-    display:none;
   }
 }
