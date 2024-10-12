@@ -22,6 +22,7 @@ import GalleryLogic from '../pages/ImageGallery/GalleryLogic';
 import DeveloperLogin from '../Authentication/DeveloperLogin';
 import ContactUs from './../pages/ContactUs/CSE/ConatctCse'
 import CseProfAdd from './../pages/Developer/people/CseProfAdd';
+import NotFound from './../pages/ErrorPages/404Page';
 
 const routers = createBrowserRouter([
   {
@@ -120,6 +121,10 @@ const routers = createBrowserRouter([
             element:<CseProfAdd/> 
           }
         ]
+      },
+      {
+        path:'*',
+        element:<NotFound/>
       }
     ]
   }

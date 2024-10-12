@@ -11,16 +11,16 @@ import ContactUs from './pages/ContactUs/CSE/ConatctCse'
 import Navbar from './Layout/Navbar'
 
 import Headroom from 'react-headroom'
-import NotFound from './pages/ErrorPages/404Page';
+
 
 function App() {
   return (
     <div >
       {/* <NewsBar />
       <ContactUs /> */}
-    <Headroom>
-    <Navbar/>
-    </Headroom>
+      <Headroom>
+        <Navbar />
+      </Headroom>
 
       <ToastContainer />
       <Outlet />
