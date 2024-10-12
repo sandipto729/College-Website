@@ -1,6 +1,8 @@
 const CseProfModel = require("./../../../models/CSE/CseProf");
 
 const CseProfAdd = async (req, res) => {
+    // const userID=req.user._id;
+    // console.log("User ID:", userID);
     try {
         const CseProfData = new CseProfModel(req.body);
         await CseProfData.save();

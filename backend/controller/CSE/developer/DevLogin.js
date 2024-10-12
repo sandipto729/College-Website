@@ -17,12 +17,13 @@ const LoginController = async (req, res) => {
         if (!isMatch) {
             return res.status(400).json({ message: "Invalid credentials" });
         }
-
+        // console.log(user);
         // Generate JWT token
         const tokenData = {
             _id: user._id,
             email: user.email
         };
+        // console.log(tokenData);
 
         const token = jwt.sign(
             { data: tokenData },

@@ -6,8 +6,16 @@ const CseNews = require('./../controller/CSE/news/CseNews');
 const CseProfProfile = require('./../controller/CSE/people/CseProfProfile');
 const CseProject = require('./../controller/CSE/project/CseProject');
 const CseStaff = require('./../controller/CSE/people/CseStaff');
+
+
+//auth
+const authToken=require('../middlewares/index');
+
+//Developer
 const DevLogin=require('../controller/CSE/developer/DevLogin');
 const DevCseAdd=require('../controller/CSE/people/CseProfAdd');
+
+
 
 
 
@@ -20,6 +28,7 @@ router.get('/CseStaff', CseStaff);
 
 //Developer
 router.post('/DevLogin',DevLogin);
-router.post('/CseProfAdd',DevCseAdd);
+router.post('/CseProfAdd',authToken,DevCseAdd);
+
 
 module.exports = router;
