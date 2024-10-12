@@ -1,15 +1,20 @@
 import { useNavigate } from "react-router-dom";
-import notfound from '../../assets/404notfound.svg'
+import notfound from '../../assets/3747371.jpg'
+import styles from './404Page.module.scss'
 
-function NotFound(){
-const navigate=useNavigate();
+function NotFound() {
+    const navigate = useNavigate();
     return (
-     <div className="flex justify-center items-center">
-        <img
-        src={notfound}
-        />
-<button onClick={()=>navigate(-1)} className="p-3 font-semibold text-center flex items-center border-solid text-xl border-amber-600 border bg-amber-400 hover:bg-amber-200 h-[50px] rounded-lg w-[100px]">Go Back</button>
-     </div>
+        <div className={styles.container}>
+            <img
+                className={styles.img}
+                src={notfound}
+            />
+            <div className={styles.text}>
+                The webpage you are looking for is currently under maintainence. Please try again later. If the problem continues, mail us at <a href="mailto:sandipto729@gmail.com">sandipto729@gmail.com</a>
+            </div>
+            <button onClick={() => navigate(-1)} className={styles.button}>Go Back</button>
+        </div>
     )
 }
 export default NotFound;
