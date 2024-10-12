@@ -6,8 +6,10 @@ import styles from './DeveloperLogin.module.scss';
 import { toast } from 'react-toastify';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { useNavigate } from 'react-router-dom';
 
 const DeveloperLogin = () => {
+    const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -30,6 +32,8 @@ const DeveloperLogin = () => {
             }
 
             toast.success(responseData.message);
+
+            // navigate('/check');
         } catch (error) {
             console.error("Error logging in:", error);
             toast.error("An unexpected error occurred. Please try again.");

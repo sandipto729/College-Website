@@ -82,6 +82,8 @@ function ProfessorForm() {
 
     const onSubmit = async(data) => {
         console.log(data);
+        //store in local storage
+        
         // backend add
         try{
             const response=await fetch(SummaryApi.CseProfAdd.url, {

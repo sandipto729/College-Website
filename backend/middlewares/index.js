@@ -2,6 +2,9 @@ const jwt = require('jsonwebtoken');
 
 async function authToken(req, res, next) {
   try {
+    console.log('Token from cookies:', req.cookies?.token);
+    console.log('Token from headers:', req.headers.authorization);
+
     const token = req.cookies?.token || req.headers.authorization?.split(' ')[1];
 
     if (!token) {
@@ -23,8 +26,8 @@ async function authToken(req, res, next) {
         });
       }
 
-      req.user = decoded.data; 
-      console.log('Decoded User:', req.user); 
+      req.user = decoded.data;
+      console.log('Decoded User:', req.user);
       next();
     });
   } catch (err) {
