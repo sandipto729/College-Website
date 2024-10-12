@@ -34,7 +34,7 @@ const DisplayFaculty = () => {
   return (
     <div className={styles.facultyContainer}>
 
-      <div className="flex justify-center items-center mb-6">
+      <div className="flex justify-center items-center mb-6 ">
         <div className="relative">
           <div className="flex items-center">
             <div className="h-px bg-gray-300 w-16"></div>

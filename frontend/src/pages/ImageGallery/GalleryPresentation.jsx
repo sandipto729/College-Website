@@ -24,7 +24,7 @@ import img11 from '../../assets/dgp11.jpeg'
 import img12 from '../../assets/dgp12.jpeg'
 import Navbar from '../../Layout/Navbar';
 
-
+import Headroom from 'react-headroom'
 
 
 function GalleryPresentation() {
@@ -56,33 +56,31 @@ function GalleryPresentation() {
   if (randomImages.length > 10) randomImages = randomImages.slice(0, 10);
 
   return (
+<div  className={styles.Container}>
+<Swiper
+ spaceBetween={30}
+ centeredSlides={true}
+ autoplay={{
+   delay: 2500,
+   disableOnInteraction: false,
+ }}
+ pagination={{
+   clickable: true,
+ }}
+ navigation={true}
+ modules={[Autoplay, Pagination, Navigation]}
+ className={styles.Swiper}        
+ style = {{
+  display:popUp?'none':'block'
+}}
 
-    <div className="flex flex-col h-screen  bg-gradient-to-r from-cyan-300 to-white-200">
-
-      <div className={styles.Container}>
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          className={styles.Swiper}
-          style={{
-            display: popUp ? 'none' : 'block'
-          }}
-        >
-          {randomImages.map((images, index) => {
-            return (
-              <SwiperSlide key={index}
-                className={styles.SwiperSlide}>
-                <img src={images}
-                />
+      >
+      {randomImages.map((images,index)=>{
+      return (
+        <SwiperSlide   key={index}
+        className={styles.SwiperSlide}>
+        <img  src={images} 
+        />
 
               </SwiperSlide>
             )
@@ -108,8 +106,7 @@ function GalleryPresentation() {
         </div>
 
 
-      </div>
-    </div>
+</div>
 
   )
 }
