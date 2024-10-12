@@ -17,9 +17,9 @@ function App() {
     <div >
       {/* <NewsBar />
       <ContactUs /> */}
-    <Headroom>
-    <Navbar/>
-    </Headroom>
+      <Headroom>
+        <Navbar />
+      </Headroom>
 
       <ToastContainer />
       <Outlet />
