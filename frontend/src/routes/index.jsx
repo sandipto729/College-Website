@@ -22,12 +22,22 @@ import GalleryLogic from '../pages/ImageGallery/GalleryLogic';
 import DeveloperLogin from '../Authentication/DeveloperLogin';
 import ContactUs from './../pages/ContactUs/CSE/ConatctCse'
 import CseProfAdd from './../pages/Developer/people/CseProfAdd';
+import NotFound from './../pages/ErrorPages/404Page';
+import AboutUs from './../pages/AboutUs/AboutUs';
 
 const routers = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     children: [
+      {
+        index: true,
+        element: <AboutUs />,
+      },
+      {
+        index:'about',
+        element: <AboutUs />,
+      },
       {
         path: 'professor',
         element: <DisplayFaculty />,
@@ -120,6 +130,10 @@ const routers = createBrowserRouter([
             element:<CseProfAdd/> 
           }
         ]
+      },
+      {
+        path:'*',
+        element:<NotFound/>
       }
     ]
   }

@@ -4,19 +4,23 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation'; 
 import 'swiper/css/autoplay';
-
 import styles from './NewsBar.module.css';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
-
 import SummaryApi from '../../common/index';
+import SkletonSchema from '../../helper/skeletonNews'
 
 export default function NewsBar() {
     const [news, setNews] = useState([]);
     const [loading, setLoading] = useState(true);  
     const [error, setError] = useState(null);    
 
+    const timeDelay = async () => {
+        await new Promise((resolve) => setTimeout(resolve, 500));
+    }
+
     // Fetch news data from JSON
     const fetchNews = async () => {
+        await timeDelay();
         try {
             const response = await fetch(SummaryApi.GetCseNews.url, {
                 method: SummaryApi.GetCseNews.method,
@@ -25,7 +29,7 @@ export default function NewsBar() {
                 },
             });
             const data = await response.json();
-            // console.log("Faulty Check News : ",data);
+            console.log(data);  // Check if data is fetched correctly
             setNews(data.slice(-20).reverse());  
             setLoading(false);  
         } catch (error) {
@@ -47,15 +51,26 @@ export default function NewsBar() {
         return groupedNews;
     };
 
+    // Handle loading state
+    if (loading) {
+        return (
+            <div className={styles.newsSkleton}>
+                <SkletonSchema/>
+                <SkletonSchema/>
+                <SkletonSchema/>
+                <SkletonSchema/>
+            </div>
+        );
+    }
+
     return (
         <div className={styles.newsBarContainer}>
             <h2 className={styles.newsBarHeader}>NewsBar</h2>
             
-            {/* Loading or error message */}
-            {loading && <p>Loading news...</p>}
+            {/* Error message */}
             {error && <p className={styles.error}>{error}</p>}
 
-            {!loading && !error && (
+            {!error && (
                 <Swiper
                     pagination={{
                         dynamicBullets: true,

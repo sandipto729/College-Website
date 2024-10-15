@@ -2,7 +2,8 @@
 
 
 import React from 'react';
-import { useForm, useFieldArray } from "react-hook-form";
+import { useEffect, useState } from 'react';
+import { useForm, useFieldArray} from "react-hook-form";
 import styles from './CseProfAdd.module.scss';
 import {toast} from "react-toastify";
 import SummaryApi from '../../../common';
@@ -82,8 +83,7 @@ function ProfessorForm() {
 
     const onSubmit = async(data) => {
         console.log(data);
-        //store in local storage
-        
+
         // backend add
         try{
             const response=await fetch(SummaryApi.CseProfAdd.url, {

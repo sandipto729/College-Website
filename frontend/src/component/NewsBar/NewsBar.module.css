@@ -1,3 +1,12 @@
+.newsSkleton{
+    width: 85vw;
+    padding: 20px;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    text-align: center;
+    margin: auto;
+}
 .newsBarContainer {
     width: 85vw;
     padding: 20px;

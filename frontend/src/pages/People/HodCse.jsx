@@ -5,6 +5,8 @@ import styles from './DisplayFaculty.module.css';
 import { NavLink } from 'react-router-dom';
 import SummaryApi from '../../common/index';
 import FacultyCard from './../../component/CardModel/CardModel'
+import LoadingState from './../../helper/loading'
+import SkletonSchema from '../../helper/skletonCard'
 
 const HodCse = () => {
     const [hodFaculty, setHodFaculty] = useState(null);
@@ -12,7 +14,12 @@ const HodCse = () => {
     const [error, setError] = useState(null);
     const HodId = '66fe37d8ed22f5271534bc09';
 
+    const timeDelay=async () => {
+        await new Promise((resolve) => setTimeout(resolve, 500));
+    }
+
     const fetchHodData = async () => {
+        await timeDelay();
         try {
             const response = await fetch(SummaryApi.GetCseProfProfile.url, {
                 method: SummaryApi.GetCseProfProfile.method,
@@ -40,8 +47,12 @@ const HodCse = () => {
         fetchHodData();
     }, []);
 
+
     if (loading) {
-        return <div>Loading...</div>; 
+        // return <LoadingState />; 
+        return <div className="flex justify-center items-center mb-6 mt-[50px]">
+            <SkletonSchema/>
+        </div>
     }
 
     if (error) {
@@ -61,7 +72,7 @@ const HodCse = () => {
                         <div className="flex items-center">
                             <div className="h-px bg-gray-300 w-16"></div>
                             <button className="text-blue-600 font-bold text-2xl">
-                                HOD CSE
+                                Hod Cse
                             </button>
                             <div className="h-px bg-gray-300 w-16"></div>
                         </div>

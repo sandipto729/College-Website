@@ -26,7 +26,7 @@ function DashBoard(dashBoard) {
       <button onClick={() => setList2(!List2)} style={{width:'full' , display:'flex' , flexDirection:'column' ,justifyContent:'space-between' }}  className={styles.GridEle1}><span className='flex flex-row w-full  justify-center mt-1 ml-1'>PEOPLE<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" /></svg></span></button>
       {List2 && 
       <ul>
-      <li><Link>Staff</Link></li>
+      <li><Link to='/staff'>Staff</Link></li>
       <li><Link to="/professor">Professor</Link></li>
       </ul>
           }
