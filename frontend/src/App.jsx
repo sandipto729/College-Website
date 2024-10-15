@@ -9,21 +9,21 @@ import GalleryLogic from './pages/ImageGallery/GalleryLogic';
 import NewsBar from './component/NewsBar/NewsBar';
 import ContactUs from './pages/ContactUs/CSE/ConatctCse'
 import Navbar from './Layout/Navbar'
-
+import ProjectDetailsPage from './pages/Project/ProjectDeatilsPage';
 import Headroom from 'react-headroom'
-
+import ProjectHomePage from './pages/Project/ProjectHamepage';
 
 function App() {
   return (
     <div >
       
-      {/* <ContactUs /> */}
-      <Headroom>
-        <Navbar />
-      </Headroom>
-      {/* <NewsBar /> */}
-      <ToastContainer />
-      <Outlet />
+{/* {    {/* <ContactUs /> */}
+    <Headroom>
+      <Navbar />
+    </Headroom>
+    {/* <NewsBar /> */}
+    <ToastContainer />
+    <Outlet /> */
     </div>
   );
 }

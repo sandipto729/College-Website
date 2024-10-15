@@ -24,6 +24,9 @@ import ContactUs from './../pages/ContactUs/CSE/ConatctCse'
 import CseProfAdd from './../pages/Developer/people/CseProfAdd';
 import NotFound from './../pages/ErrorPages/404Page';
 import AboutUs from './../pages/AboutUs/AboutUs';
+import ProjectHomePage from '../pages/Project/ProjectHamepage';
+import ProjectDetailsPage from '../pages/Project/ProjectDeatilsPage';
+import ProjectDeatilsPageLogic from '../pages/Project/ProjectDetailsPageLogic';
 
 const routers = createBrowserRouter([
   {
@@ -132,8 +135,17 @@ const routers = createBrowserRouter([
         ]
       },
       {
-        path:'*',
-        element:<NotFound/>
+        path:'research',
+        element:<ProjectHomePage/>,
+        children:[
+          {
+            path:'/projects',
+            element:<ProjectDeatilsPageLogic/>
+          }
+        ]
+      },{
+
+    
       }
     ]
   }
