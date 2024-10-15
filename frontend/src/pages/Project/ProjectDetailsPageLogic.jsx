@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ProjectDetailsPage from './ProjectDeatilsPage';
-import ProjectHomePage from './ProjectHamepage';
-import projects from './Data';
+import projects from '../../../public/ProjectData';
 
 function ProjectDeatilsPageLogic() {
   const [searchTerm, setSearchTerm] = useState('');
