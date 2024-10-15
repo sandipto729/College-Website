@@ -1,0 +1,158 @@
+/* Global Styling */
+/* body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f4f4f9;
+  color: #333;
+} */
+
+/* Wrapper that contains both content and news feed */
+.about-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* justify-content: space-between; */
+  max-width: 100%;
+  /* height: 100vh; */
+  /* overflow: hidden;  */
+}
+
+/* Main content (About Us section) */
+.about-us-container {
+  position: relative;
+  flex: 3;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow-y: auto;
+  padding: 2.3rem;
+  z-index: 1; 
+}
+
+.about-us-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://media.discordapp.net/attachments/984632500875821066/1287661776833351732/compscimidjourney_A_minimalist_pencil_sketch_on_a_clean_white_b_a6687bae-1bd6-4ded-9eff-944ff4737d65.png?ex=670cb9fb&is=670b687b&hm=705f74339fdb6892c3741b512aef2954558265dffdaa3f0cea4faa26c5b62834&=&format=webp&quality=lossless&width=700&height=700');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5; 
+  z-index: -1; 
+  border-radius: 8px; 
+}
+
+
+/* Header Section Styling */
+.header-section h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  text-align: left;
+}
+
+.header-section hr {
+  width: 100px;
+  border: 2px solid #333;
+  margin: 10px 0;
+}
+
+.header-section p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  /* text-align: center; */
+  margin-top: 1rem;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #0056b3;
+}
+
+section p,
+section ul {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* News feed section (right sidebar) */
+.news-feed {
+  flex: 0 0 250px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-left: 2px solid #ccc;
+  height: 100vh;
+  overflow-y: scroll; 
+  position: sticky;
+  top: 0; 
+}
+
+.news-feed h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.news-feed ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.news-feed li {
+  margin-bottom: 15px;
+}
+
+.news-feed li a {
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: bold;
+}
+
+.news-feed li a:hover {
+  text-decoration: underline;
+}
+
+.news-feed p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .about-page-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .news-feed {
+    width: 100%; 
+    margin-left: 0;
+    margin-top: 20px;
+    position: static;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .about-us-container {
+    max-width: 100%;
+    height: auto; 
+  }
+}

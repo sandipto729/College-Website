@@ -16,12 +16,12 @@ import Headroom from 'react-headroom'
 function App() {
   return (
     <div >
-      {/* <NewsBar />
-      <ContactUs /> */}
+      
+      {/* <ContactUs /> */}
       <Headroom>
         <Navbar />
       </Headroom>
-
+      {/* <NewsBar /> */}
       <ToastContainer />
       <Outlet />
     </div>

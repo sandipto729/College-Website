@@ -6,6 +6,7 @@ import { FaInternetExplorer, FaFacebook, FaResearchgate, FaTwitter, FaLinkedin }
 import { SiGooglescholar } from "react-icons/si";
 import { IoMenu } from "react-icons/io5";
 import SummaryApi from '../../common/index';
+import LoadingSchema from './../../helper/loading'
 
 const TeacherProfile = () => {
   const { id } = useParams();
@@ -86,7 +87,7 @@ const TeacherProfile = () => {
   };
 
   if (!professor) {
-    return <div>Loading...</div>;
+    return <LoadingSchema />;
   }
 
   const isActive = (path) => location.pathname.includes(path);
