@@ -34,10 +34,10 @@ console.log(consultancyProjects)
   return (
     <div>
       <div className={styles.header}>
-      <button onClick={() => {setShowSponsered(!showSponsered)
-         setShowConsultancy(!showConsultancy)}}>Sponsored Projects</button>
-      <button onClick={() => {setShowSponsered(!showSponsered)
-         setShowConsultancy(!showConsultancy)}}>Consultancy Projects</button>
+      <button onClick={() => {setShowSponsered(true)
+         setShowConsultancy(false)}}>Sponsored Projects</button>
+      <button onClick={() => {setShowSponsered(false)
+         setShowConsultancy(true)}}>Consultancy Projects</button>
       </div>
       <table border="1" cellPadding="10" cellSpacing="0">
         <thead>
