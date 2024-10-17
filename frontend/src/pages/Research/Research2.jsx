@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-function ProjectDetailsPage({ project, closeModal }){
+function ResearchDetailsPage({ project, closeModal }){
 
 
     return (
@@ -31,4 +31,4 @@ function ProjectDetailsPage({ project, closeModal }){
 
 }
 
-export default ProjectDetailsPage
+export default ResearchDetailsPage

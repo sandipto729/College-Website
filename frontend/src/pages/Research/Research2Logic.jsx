@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import ProjectDetailsPage from './ProjectDeatilsPage';
 import projects from '../../../public/ProjectData';
+import ResearchDetailsPage from './Research2';
 
-function ProjectDeatilsPageLogic() {
+function ResearchPageLogic() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedProject, setSelectedProject] = useState(null);
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -26,6 +26,8 @@ function ProjectDeatilsPageLogic() {
   const closeModal = () => {
     setSelectedProject(null);
   };
+
+  
 
   return (
     <div className="container mx-auto py-8 px-4">
@@ -74,12 +76,12 @@ function ProjectDeatilsPageLogic() {
       </div>
 
       {selectedProject && (
-        <ProjectDetailsPage project={selectedProject} closeModal={closeModal} />
+        <ResearchDetailsPage project={selectedProject} closeModal={closeModal} />
       )}
     </div>
   );
 }
 
-export default  ProjectDeatilsPageLogic;
+export default  ResearchPageLogic;
     
 

@@ -21,6 +21,10 @@ const SummaryApi={
         url:`${backendUrl}/api/CseProjectDetails`,
         method:"POST"
     },
+    GetCseProjectFetch:{
+        url:`${backendUrl}/api/CseProjectFetch`,
+        method:"POST"
+    },
     DeveloperLogin:{
         url:`${backendUrl}/api/DevLogin`,
         method:"POST"
