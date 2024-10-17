@@ -5,7 +5,7 @@ import researchData from '../../../public/ResearchData';
 const ResearchDetail = () =>{
 
   const { id } = useParams();
-  
+
   console.log(".......",id)
 
   const research = researchData.find((item) => item.id === parseInt(id));
