@@ -24,9 +24,11 @@ import ContactUs from './../pages/ContactUs/CSE/ConatctCse'
 import CseProfAdd from './../pages/Developer/people/CseProfAdd';
 import NotFound from './../pages/ErrorPages/404Page';
 import AboutUs from './../pages/AboutUs/AboutUs';
-import CardModel from '../pages/Developer/people/CardModel/CardModel';
-import ResearchPageLogic from '../pages/Research/Research2Logic';
+//import CardModel from '../pages/Developer/people/CardModel/CardModel';
 import Project from '../pages/Project/Project';
+import Research from '../pages/Research/Research';
+import ResearchDetail from '../pages/Research/ResearchDetailsPage';
+//import DeveloperDisplayFaculty from '../pages/Developer/people/People/DisplayFaculty';
 
 const routers = createBrowserRouter([
   {
@@ -126,7 +128,6 @@ const routers = createBrowserRouter([
       }
       , {
         path: 'profile',
-
         children: [
           {
             path: 'cseProfAdd',
@@ -140,18 +141,23 @@ const routers = createBrowserRouter([
       }, 
       {
         path: 'research',
-        element: <ResearchPageLogic />,
-      }, 
-
-      {
-        path: 'developer',
+        element: <Research />,
         children: [
           {
-            path: 'cardmodel',
-            element: <CardModel/>
+            path: ':id',
+            element: <ResearchDetail />
           }
-        ]
-      }, 
+        ]      }, 
+
+      // {{
+      //   path: 'developer',
+      //   children: [
+      //     {
+      //       path: 'professor',
+      //       element: <DeveloperDisplayFaculty/>
+      //     }
+      //   ]
+      // }}, 
 
     ]
   }
