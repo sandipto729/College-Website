@@ -142,23 +142,12 @@ const routers = createBrowserRouter([
       {
         path: 'research',
         element: <Research />,
-        children: [
-          {
-            path: ':id',
-            element: <ResearchDetail />
-          }
-        ]      }, 
-
-      // {{
-      //   path: 'developer',
-      //   children: [
-      //     {
-      //       path: 'professor',
-      //       element: <DeveloperDisplayFaculty/>
-      //     }
-      //   ]
-      // }}, 
-
+      },
+      {
+        path: 'research/:id',
+        element: <ResearchDetail />,
+      }
+        
     ]
   }
 
