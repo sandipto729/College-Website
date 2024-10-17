@@ -7,7 +7,7 @@ function Dropdown({ data, OpenDropDown }) {
             {
                 data.map((item, index) => {
                     return (
-                        <span onMouseMove={() => OpenDropDown()} key={index} className={styles.dropItem} ><Link to={item.link}>{item.itemName}</Link></span>
+                        <Link to={item.link} onMouseMove={() => OpenDropDown()} key={index} className={styles.dropItem} >{item.itemName}</Link>
                     )
                 })
             }

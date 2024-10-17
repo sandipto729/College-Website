@@ -5,25 +5,20 @@ import './App.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import GalleryLogic from './pages/ImageGallery/GalleryLogic';
-import NewsBar from './component/NewsBar/NewsBar';
-import ContactUs from './pages/ContactUs/CSE/ConatctCse'
 import Navbar from './Layout/Navbar'
-
 import Headroom from 'react-headroom'
-
 
 function App() {
   return (
     <div >
       
-      {/* <ContactUs /> */}
-      <Headroom>
-        <Navbar />
-      </Headroom>
-      {/* <NewsBar /> */}
-      <ToastContainer />
-      <Outlet />
+{/* {    {/* <ContactUs /> */}
+    <Headroom>
+      <Navbar />
+    </Headroom>
+    {/* <NewsBar /> */}
+    <ToastContainer />
+    <Outlet /> */
     </div>
   );
 }

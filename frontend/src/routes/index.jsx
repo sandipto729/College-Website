@@ -24,6 +24,9 @@ import ContactUs from './../pages/ContactUs/CSE/ConatctCse'
 import CseProfAdd from './../pages/Developer/people/CseProfAdd';
 import NotFound from './../pages/ErrorPages/404Page';
 import AboutUs from './../pages/AboutUs/AboutUs';
+import CardModel from '../pages/Developer/people/CardModel/CardModel';
+import ResearchPageLogic from '../pages/Research/Research2Logic';
+import Project from '../pages/Project/Project';
 
 const routers = createBrowserRouter([
   {
@@ -35,7 +38,7 @@ const routers = createBrowserRouter([
         element: <AboutUs />,
       },
       {
-        index:'about',
+        index: 'about',
         element: <AboutUs />,
       },
       {
@@ -121,20 +124,35 @@ const routers = createBrowserRouter([
         path: 'contactUs',
         element: <ContactUs />,
       }
-      ,{
-        path:'profile',
-        
-        children:[
+      , {
+        path: 'profile',
+
+        children: [
           {
-            path:'cseProfAdd',
-            element:<CseProfAdd/> 
+            path: 'cseProfAdd',
+            element: <CseProfAdd />
           }
         ]
       },
       {
-        path:'*',
-        element:<NotFound/>
-      }
+        path: 'project',
+        element: <Project/>,
+      }, 
+      {
+        path: 'research',
+        element: <ResearchPageLogic />,
+      }, 
+
+      {
+        path: 'developer',
+        children: [
+          {
+            path: 'cardmodel',
+            element: <CardModel/>
+          }
+        ]
+      }, 
+
     ]
   }
 

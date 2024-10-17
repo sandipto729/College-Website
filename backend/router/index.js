@@ -6,6 +6,7 @@ const CseNews = require('./../controller/CSE/news/CseNews');
 const CseProfProfile = require('./../controller/CSE/people/CseProfProfile');
 const CseProject = require('./../controller/CSE/project/CseProject');
 const CseStaff = require('./../controller/CSE/people/CseStaff');
+const CseProjectFetch = require('../controller/CSE/project/CseProjectFetch');
 
 
 //auth
@@ -25,6 +26,7 @@ router.get('/CseNews', CseNews);
 router.post('/CseProfProfile', CseProfProfile);
 router.post('/CseProjectDetails', CseProject);
 router.get('/CseStaff', CseStaff); 
+router.post('/CseProjectFetch', CseProjectFetch);
 
 //Developer
 router.post('/DevLogin',DevLogin);

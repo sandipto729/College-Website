@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(240, 248, 255, 0.8); /* Azure with transparency */
+    background-color: rgba(0, 0, 0, 0.562); /* Azure with transparency */
     flex-wrap: wrap;
     }
     .imageContainer{
