@@ -4,7 +4,7 @@ import researchData from '../../../public/ResearchData';
 
 const ResearchDetail = () =>{
 
-  const { id } = useParams();
+  const {id } = useParams();
 
   console.log(".......",id)
 
