@@ -28,7 +28,7 @@ import AboutUs from './../pages/AboutUs/AboutUs';
 import Project from '../pages/Project/Project';
 import Research from '../pages/Research/Research';
 import ResearchDetail from '../pages/Research/ResearchDetailsPage';
-//import DeveloperDisplayFaculty from '../pages/Developer/people/People/DisplayFaculty';
+import DeveloperDisplayFaculty from '../pages/Developer/people/People/DisplayFaculty';
 
 const routers = createBrowserRouter([
   {
@@ -146,6 +146,10 @@ const routers = createBrowserRouter([
       {
         path: 'research/:id',
         element: <ResearchDetail />,
+      },
+      {
+        path:'developer/professor',
+        element:<DeveloperDisplayFaculty/>
       }
         
     ]
