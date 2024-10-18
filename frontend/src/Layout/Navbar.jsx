@@ -33,7 +33,7 @@ function Navbar() {
           <button onClick={() => setDropdown2(!Dropdown2)} style={{width:'full' ,display:'flex' , flexDirection:'column' ,justifyContent:'space-between' }} onMouseLeave={() => setDropdown2(false)} className={styles.GridEle1}><span className='flex flex-row w-full  justify-between mt-1 ml-1'>PEOPLE<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" /></svg></span>{Dropdown2 && <Dropdown  data={[{ itemName: "Staff", link: "/staff" }, { itemName: "Professor", link: "/professor" }]} OpenDropDown={OpenDropDown2} />}</button>
           <Link to={'/research'} className={styles.GridEle1}>RESEARCH</Link>
           <Link to={'/project'} className={styles.GridEle1}>PROJECTS</Link>
-          <button className={styles.GridEle1}>FACILITIES</button>
+          <Link to="/facilities" className={styles.GridEle1}>FACILITIES</Link>
           <button onClick={() => setDropdown3(!Dropdown3)} style={{display:'flex' , flexDirection:'column',justifyContent:'space-between'}} onMouseLeave={() => setDropdown3(false)}  className={styles.GridEle1}><span className='flex flex-row w-full  justify-between mt-1 ml-1'><p>ACTIVITIES</p> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" /></svg></span>{Dropdown3 && <Dropdown data={[{ itemName: "Upcoming Events", link: "" }, { itemName: "Past Events", link: "" }]} OpenDropDown={OpenDropDown3} />}</button>
           <Link to={'/photoGallery'} className={styles.GridEle1}>PHOTO GALLERY</Link>
           <Link to={'/contactus'} className={styles.GridEle1}>CONTACT US</Link>

@@ -29,7 +29,7 @@ import Project from '../pages/Project/Project';
 import Research from '../pages/Research/Research';
 import ResearchDetail from '../pages/Research/ResearchDetailsPage';
 //import DeveloperDisplayFaculty from '../pages/Developer/people/People/DisplayFaculty';
-
+import FacilitiesApp from '../pages/Facilities/FacilitiesApp';
 const routers = createBrowserRouter([
   {
     path: '/',
@@ -143,9 +143,13 @@ const routers = createBrowserRouter([
         path: 'research',
         element: <Research />,
       },
+      
       {
         path: 'research/:id',
         element: <ResearchDetail />,
+      },{
+        path:'facilities',
+        element:<FacilitiesApp />,
       },
       {
         path: '*',
