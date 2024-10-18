@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SummaryApi from '../../common';
-import './projectstyle.css'; 
+import styles from './projectstyle.module.css'; 
 
 const Project = () => {
   const [sponseredProjects, setSponseredProjects] = useState([]);
@@ -33,10 +33,10 @@ const Project = () => {
 
   return (
     <div>
-      <div className="hero">
+      <div className={styles.hero}> {}
         <h1 className="text-2xl font-bold mb-4">Project Overview</h1>
-        <div className="line"></div>
-        <div className="subheading">Explore Our Projects</div>
+        <div className={styles.line}></div> {}
+        <div className={styles.subheading}>Explore Our Projects</div> {}
       </div>
 
       <div className="flex justify-center mb-4">
@@ -49,7 +49,7 @@ const Project = () => {
         >
           Sponsored Projects
         </button>
-        <div className="h-px bg-gray-300 w-16 mx-4"></div> {/* Added margin for spacing */}
+        <div className="h-px bg-gray-300 w-16 mx-4"></div>
         <button
           onClick={() => {
             setShowSponsered(false);
@@ -61,9 +61,9 @@ const Project = () => {
         </button>
       </div>
       
-      <div className="table-container">
+      <div className={styles.tableContainer}> {}
         <table className="min-w-full border border-gray-300">
-          <thead className="bg-navy text-white">
+          <thead className={`${styles.bgnavy} text-white`}> {}
             <tr>
               <th className="border px-4 py-2">Title</th>
               <th className="border px-4 py-2">PI</th>
