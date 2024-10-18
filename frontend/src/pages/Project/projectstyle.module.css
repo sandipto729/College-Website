@@ -1,0 +1,33 @@
+
+
+.hero {
+    background: linear-gradient(to right, #001f3f, #007bff); 
+    padding: 3rem; 
+    color: white; 
+    text-align: center; 
+  }
+  
+  .hero .line {
+    width: 50%;
+    height: 4px; 
+    background-color: white; 
+    margin: 1rem auto; 
+  }
+  
+  .hero .subheading {
+    font-size: 1.25rem; 
+    margin-top: 1rem; 
+  }
+  
+  .text-navy {
+    color: #001f3f;
+  }
+  
+  .bgnavy {
+    background-color: #001f3f; 
+  }
+  
+  .table-container {
+    margin-top: 2rem; 
+  }
+  

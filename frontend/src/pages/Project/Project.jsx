@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import SummaryApi from '../../common';
-import styles from './Project.module.scss';
+import styles from './projectstyle.module.css'; 
+
 const Project = () => {
-  
   const [sponseredProjects, setSponseredProjects] = useState([]);
   const [consultancyProjects, setConsultancyProjects] = useState([]);
   const [showSponsered, setShowSponsered] = useState(true);
   const [showConsultancy, setShowConsultancy] = useState(false);
+
   const researchFetch = async () => {
     try {
       const response = await fetch(SummaryApi.GetCseProjectFetch.url, {
@@ -17,72 +18,91 @@ const Project = () => {
         credentials: 'include',
       });
 
-      const data = await response.json(); 
-
+      const data = await response.json();
       setSponseredProjects(data.sponsered);
       setConsultancyProjects(data.consultancy);
       console.log("Project Data: ", data);
     } catch (error) {
-      console.log(error); // Catch and log any errors
+      console.log(error);
     }
   };
 
   useEffect(() => {
-    researchFetch(); // Call the fetch function inside useEffect
+    researchFetch();
   }, []);
-console.log(consultancyProjects)
+
   return (
     <div>
-      <div className={styles.header}>
-      <button onClick={() => {setShowSponsered(true)
-         setShowConsultancy(false)}}>Sponsored Projects</button>
-      <button onClick={() => {setShowSponsered(false)
-         setShowConsultancy(true)}}>Consultancy Projects</button>
+      <div className={styles.hero}> {}
+        <h1 className="text-2xl font-bold mb-4">Project Overview</h1>
+        <div className={styles.line}></div> {}
+        <div className={styles.subheading}>Explore Our Projects</div> {}
       </div>
-      <table border="1" cellPadding="10" cellSpacing="0">
-        <thead>
-          <tr className=''>
-            <th>Title</th>
-            <th>PI</th>
-            <th>CoPIs</th>
-            <th>Funding Agency</th>
-            <th>Amount</th>
-            <th>Project Status</th>
-            <th>Date of Initiation</th>
-            <th>Date of Completion</th>
-          </tr>
-        </thead>
-        <tbody>
-          {showSponsered ? sponseredProjects.map((project, index) => (
-            <tr key={index}>
-              <td>{project.Title}</td>
-              <td>{project.NameofthePI}</td>
-              <td>{project.NameoftheCoPIs.join(', ')}</td>
-              <td>{project.FundingAgency}</td>
-              <td>{project.Amount}</td>
-              <td>{project.ProjectStatus}</td>
-              <td>{project.DateofInitiation}</td>
-              <td>{project.DateofCompletion}</td>
+
+      <div className="flex justify-center mb-4">
+        <button
+          onClick={() => {
+            setShowSponsered(true);
+            setShowConsultancy(false);
+          }}
+          className={`${showSponsered ? 'text-blue-600 font-bold' : 'text-gray-500'} px-6 py-2 focus:outline-none text-2xl`}
+        >
+          Sponsored Projects
+        </button>
+        <div className="h-px bg-gray-300 w-16 mx-4"></div>
+        <button
+          onClick={() => {
+            setShowSponsered(false);
+            setShowConsultancy(true);
+          }}
+          className={`${showConsultancy ? 'text-blue-600 font-bold' : 'text-gray-500'} px-6 py-2 focus:outline-none text-2xl`}
+        >
+          Consultancy Projects
+        </button>
+      </div>
+      
+      <div className={styles.tableContainer}> {}
+        <table className="min-w-full border border-gray-300">
+          <thead className={`${styles.bgnavy} text-white`}> {}
+            <tr>
+              <th className="border px-4 py-2">Title</th>
+              <th className="border px-4 py-2">PI</th>
+              <th className="border px-4 py-2">CoPIs</th>
+              <th className="border px-4 py-2">Funding Agency</th>
+              <th className="border px-4 py-2">Amount</th>
+              <th className="border px-4 py-2">Project Status</th>
+              <th className="border px-4 py-2">Date of Initiation</th>
+              <th className="border px-4 py-2">Date of Completion</th>
             </tr>
-          )):null}
-          {
-            showConsultancy ? consultancyProjects.map((project, index) => (
-              <tr key={index}>
-                <td>{project.Title}</td>
-                <td>{project.NameofthePI}</td>
-                <td>{project.NameoftheCoPIs.join(', ')}</td>
-                <td>{project.FundingAgency}</td>
-                <td>{project.Amount}</td>
-                <td>{project.ProjectStatus}</td>
-                <td>{project.DateofInitiation}</td>
-                <td>{project.DateofCompletion}</td>
+          </thead>
+          <tbody>
+            {showSponsered && sponseredProjects.map((project, index) => (
+              <tr key={index} className="hover:bg-gray-100">
+                <td className="border px-4 py-2">{project.Title}</td>
+                <td className="border px-4 py-2">{project.NameofthePI}</td>
+                <td className="border px-4 py-2">{project.NameoftheCoPIs.join(', ')}</td>
+                <td className="border px-4 py-2">{project.FundingAgency}</td>
+                <td className="border px-4 py-2">{project.Amount}</td>
+                <td className="border px-4 py-2">{project.ProjectStatus}</td>
+                <td className="border px-4 py-2">{project.DateofInitiation}</td>
+                <td className="border px-4 py-2">{project.DateofCompletion}</td>
               </tr>
-            )):null
-          }
-
-        </tbody>
-      </table>
-
+            ))}
+            {showConsultancy && consultancyProjects.map((project, index) => (
+              <tr key={index} className="hover:bg-gray-100">
+                <td className="border px-4 py-2">{project.Title}</td>
+                <td className="border px-4 py-2">{project.NameofthePI}</td>
+                <td className="border px-4 py-2">{project.NameoftheCoPIs.join(', ')}</td>
+                <td className="border px-4 py-2">{project.FundingAgency}</td>
+                <td className="border px-4 py-2">{project.Amount}</td>
+                <td className="border px-4 py-2">{project.ProjectStatus}</td>
+                <td className="border px-4 py-2">{project.DateofInitiation}</td>
+                <td className="border px-4 py-2">{project.DateofCompletion}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
