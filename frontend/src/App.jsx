@@ -11,14 +11,11 @@ import Headroom from 'react-headroom'
 function App() {
   return (
     <div >
-      
-{/* {    {/* <ContactUs /> */}
-    <Headroom>
-      <Navbar />
-    </Headroom>
-    {/* <NewsBar /> */}
-    <ToastContainer />
-    <Outlet /> */
+      <Headroom>
+        <Navbar />
+      </Headroom>
+      <ToastContainer />
+      <Outlet /> */
     </div>
   );
 }

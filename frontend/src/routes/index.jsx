@@ -146,6 +146,10 @@ const routers = createBrowserRouter([
       {
         path: 'research/:id',
         element: <ResearchDetail />,
+      },
+      {
+        path: '*',
+        element: <NotFound />
       }
         
     ]
