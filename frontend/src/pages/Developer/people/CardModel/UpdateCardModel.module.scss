@@ -52,6 +52,20 @@
 .formImage{
     display: hidden;
 }
+.formInput textarea{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    &:focus{
+        border-color: #007bff;
+        outline: none;
+    }
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
 
 .container{
     position: fixed;
