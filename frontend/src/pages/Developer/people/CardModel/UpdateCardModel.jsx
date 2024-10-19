@@ -85,8 +85,10 @@ function UpdateCardModel({SetUpdateCardMOdel,faculty }) {
             <div className='flex flex-row justify-center'>
                 <div >
                 <img  className="w-28 h-28 rounded-full object-cover" src={imagePreview?imagePreview:faculty.photo} alt={`Profile of ${faculty.name}`}/>
-                <div className='w-full'><label htmlFor="photo" className='w-full bg-green-500 rounded-md h-8'>Change Photo</label></div>
+                <div className='w-full h-7 bg-green-500 rounded-md text-center mt-2'>
+                <div className='w-full'><label htmlFor="photo" className=''>Change Photo</label></div>
                 <input type="file"  accept=".jpg, .jpeg, .png" id="photo"  className="hidden" onChange={handleImageChange}/>
+                </div>
                 </div>
             </div>
     <div className={styles.formInput}>
