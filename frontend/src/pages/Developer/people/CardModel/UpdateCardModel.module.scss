@@ -1,0 +1,96 @@
+.formData {
+    position: fixed;
+    top:18%;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    border-radius: 20px;
+    width: 40%;
+    z-index: 4;
+    padding: 10px;
+    background-color: whitesmoke;
+    overflow-y: scroll;
+    
+    /* Hide scrollbar for all browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.formData::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.formInput{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 2px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px white;
+    border-radius: 5px;
+    width: 100%;
+    padding: 2px;
+}
+.formInput label{
+    font-weight: semibold;
+}
+.formInput input{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    &:focus{
+        border-color: #007bff;
+        outline: none;
+    }
+}
+.formImage{
+    display: hidden;
+}
+.formInput textarea{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    &:focus{
+        border-color: #007bff;
+        outline: none;
+    }
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.562); /* Azure with transparency */
+    flex-wrap: wrap;
+
+}
+
+.submitButton{
+    width: 100%;
+    background-color: antiquewhite;
+    border-radius: 3px;
+    margin-top: 3px;
+    padding: 3px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    &:hover{
+        background-color: wheat;
+    }
+}
